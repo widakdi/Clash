@@ -152,7 +152,7 @@ proxy-groups:
 proxy-providers:
   MAINSSH:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/mainssh.yaml"
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
     interval: 3600
     path: ./server/mainssh.yaml
     health-check:
@@ -161,7 +161,7 @@ proxy-providers:
       interval: 600
   OPENTUNNEL:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/mainssh.yaml"
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
     interval: 3600
     path: ./server/opentunnel.yaml
     health-check:
@@ -170,7 +170,7 @@ proxy-providers:
       interval: 600  
   SSHKIT:
      type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/sshkit.yaml"
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
     interval: 3600
     path: ./server/sshkit.yaml
     health-check:
@@ -179,7 +179,7 @@ proxy-providers:
       interval: 600
   ID:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/id.yaml"
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
     interval: 3600
     path: ./server/id.yaml
     health-check:
@@ -188,7 +188,7 @@ proxy-providers:
       interval: 600  
   SG:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/sg.yaml"
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sg.yaml"
     interval: 3600
     path: ./server/sg.yaml
     health-check:
