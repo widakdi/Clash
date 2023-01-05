@@ -121,7 +121,7 @@ proxy-groups:
   - DIRECT
   - MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
   - OPENTUNNEL
-  - SG
+  - SINGAPURA (CAMPUR)
   - SSHKIT
   - ID
 - name: MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
@@ -134,7 +134,7 @@ proxy-groups:
   disable-udp: false
   use:
   - OPENTUNNEL
-- name: SG
+- name: SINGAPURA (CAMPUR)
   type: select
   disable-udp: false
   use:
