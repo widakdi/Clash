@@ -196,4 +196,4 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 99
 rules:
-  - MATCH,PILIHAN SERVER
+  - MATCH,PILIH GRUP SERVER
