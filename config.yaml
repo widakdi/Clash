@@ -161,7 +161,7 @@ proxy-providers:
       interval: 99
   OPENTUNNEL:
     type: http
-    url : "https://raw.githubusercontent.com/widakdi/Clash/main//server/opentunnel.yaml"
+    url : "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
     interval : 3600
     path: "./widakdi/Clash/main/server/opentunnel.yaml"    health-check:
       enable: true
