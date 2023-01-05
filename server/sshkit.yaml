@@ -51,7 +51,7 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0402_sg2-v2ray.sshkit.org
+  - name: 0402_sg2_widakdi
     server: *akrab2
     port: 80
     type: vmess
@@ -64,6 +64,22 @@ proxies:
     network: ws
     ws-opts:
       path: /sshkit/582191343/63b611b014a74/
+      headers:
+        Host: sg2-v2ray.sshkit.org
+    udp: true
+  - name: 0102_sg2_nurul
+    server: *akrab2
+    port: 80
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sg2-v2ray.sshkit.org
+    network: ws
+    ws-opts:
+      path: /sshkit/1453093006/63b2b06fc2a40/
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
