@@ -114,7 +114,7 @@ dns:
   # }
 proxies:
 proxy-groups:
-- name: SELECTOR
+- name: PILIH SERVER
   type: select
   disable-udp: false
   proxies:
@@ -152,44 +152,48 @@ proxy-groups:
 proxy-providers:
   MAINSSH:
     type: http
-    url : "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
-    interval : 3600
-    path: "./server/mainssh.yaml"
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/mainssh.yaml"
+    interval: 3600
+    path: ./server/mainssh.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 99
+      interval: 600
   OPENTUNNEL:
     type: http
-    url : "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
-    interval : 3600
-    path: "./server/opentunnel.yaml"    health-check:
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/mainssh.yaml"
+    interval: 3600
+    path: ./server/opentunnel.yaml
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 99
+      interval: 600  
   SSHKIT:
-    type: http
-    url : "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
-    interval : 3600
-    path: "./server/sshkit.yaml"    health-check:
+     type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/sshkit.yaml"
+    interval: 3600
+    path: ./server/sshkit.yaml
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 99
+      interval: 600
   ID:
     type: http
-    url : "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
-    interval : 3600
-    path: "./server/id.yaml"    health-check:
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/id.yaml"
+    interval: 3600
+    path: ./server/id.yaml
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 99
+      interval: 600  
   SG:
     type: http
-    url : "https://raw.githubusercontent.com/widakdi/Clash/main/server/sg.yaml"
-    interval : 3600
-    path: "./server/sg.yaml"    health-check:
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main//server/sg.yaml"
+    interval: 3600
+    path: ./server/sg.yaml
+    health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 99
+      interval: 600
 rules:
-  - MATCH,SELECTOR
+  - MATCH,PILIH SERVER
