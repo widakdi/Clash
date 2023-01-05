@@ -1,0 +1,83 @@
+akrab:
+  - &akrab1 104.17.3.81
+  - &akrab2 172.64.149.82
+  - &akrab3 188.114.97.12
+  - &akrab4 172.67.73.39
+  - &akrab5 104.18.38.174
+  - &akrab6 172.67.199.34
+  - &akrab7 141.193.213.20
+  - &akrab8 141.193.213.21
+  - &akrab9 104.20.74.141
+  - &akrab10 104.20.75.141
+  - &akrab11 104.18.11.39
+  - &akrab12 104.18.10.39
+  - &akrab13 104.18.2.2
+  - &akrab14 104.18.21.226
+  - &akrab15 104.21.21.147
+  - &akrab16 104.26.5.10
+  - &akrab17 104.26.4.10
+  - &akrab18 104.18.24.243
+  - &akrab19 104.18.25.243
+  - &akrab20 104.18.26.28
+  - &akrab21 104.18.27.28
+  - &akrab22 104.18.30.9
+  - &akrab23 104.18.31.9
+  - &akrab24 104.17.2.81
+  - &akrab25 104.21.21.104
+  - &akrab26 104.21.10.162
+  - &akrab27 104.21.4.109
+  - &akrab28 104.21.16.163
+  - &akrab29 104.21.6.56
+  - &akrab30 104.21.12.167
+  - &akrab31 172.67.70.14
+  - &akrab32 104.26.14.59
+  - &akrab33 104.26.15.59
+  - &akrab34 170.114.46.0
+  - &akrab35 104.21.21.107
+  - &akrab36 172.67.199.34
+  - &akrab37 104.17.71.206
+  - &akrab38 104.17.70.206
+  - &akrab39 104.21.1.180
+  - &akrab40 104.21.1.229
+  - &akrab41 104.16.42.102
+  - &akrab42 104.16.43.102
+  - &akrab43 104.18.211.56
+  - &akrab44 104.18.24.139
+  - &akrab45 104.18.211.56
+  - &akrab46 172.67.182.69
+  - &akrab47 104.21.32.17
+  - &akrab48 104.26.4.126
+flex:
+  - &flex 104.22.2.25
+
+proxies:
+  - name: 1801_sgm1ray.serverip.my.id_opokoweb-serverssh.net
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 1aba4b87-20cb-4496-a0a3-fc2480cecf32
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgm1ray.serverip.my.id
+    network: ws
+    ws-opts:
+      path: /serverssh.net
+      headers:
+        Host: sgm1ray.serverip.my.id
+    udp: true
+  - name: 0901_sg2grpc.serverip.my.id_Hujkiji-serverssh.net
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 4b0f72a5-468d-408e-b43d-6ead2c5d8919
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2grpc.serverip.my.id
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: grpc
+    udp: true
