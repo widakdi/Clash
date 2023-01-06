@@ -52,7 +52,7 @@ flex:
 
 proxies:
   - name: 0402_sg2_widakdi
-    server: *akrab2
+    server: *akrab4
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -68,7 +68,7 @@ proxies:
         Host: sg2-v2ray.sshkit.org
     udp: true
   - name: 0102_sg2_nurul
-    server: *akrab2
+    server: *akrab4
     port: 80
     type: vmess
     uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
