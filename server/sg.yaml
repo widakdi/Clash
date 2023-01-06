@@ -83,7 +83,7 @@ proxies:
         Host: sg7.v2vless.xyz
     udp: true
   - name: 1301_sg6.v2vless.xyz_sshocean
-    server: akrab
+    server: *akrab4
     port: 80
     type: vless
     uuid: 61c4bd22-6653-498a-9a8e-7f8137060879
