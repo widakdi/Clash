@@ -90,10 +90,10 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: sg6.v2vless.xyz
+    servername: 172.67.73.39
     network: ws
-    ws-opts:
+    ws-opts: 
       path: /vless
-      headers:
+      headers: 
         Host: sg6.v2vless.xyz
     udp: true
