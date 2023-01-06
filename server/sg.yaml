@@ -67,16 +67,18 @@ proxies:
       headers:
         Host: sgm1ray.serverip.my.id
     udp: true
-  - name: 1301_sg7-grpc.xvless.xyz
+  - name: 1301_sg7.v2vless.xyz_sshocean
     server: *akrab4
-    port: 443
+    port: 80
     type: vless
-    uuid: fcf2512f-80e1-4d16-8bb8-159626e7e97a
+    uuid: 31ba9f53-c8bc-4b93-9a3b-5192f9ba0b0d
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
-    servername: sg7-grpc.xvless.xyz
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc
+    servername: sg7.v2vless.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sg7.v2vless.xyz
     udp: true
