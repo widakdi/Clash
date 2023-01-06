@@ -67,17 +67,16 @@ proxies:
       headers:
         Host: sgm1ray.serverip.my.id
     udp: true
-  - name: 0901_sg2grpc.serverip.my.id_Hujkiji-serverssh.net
+  - name: 1301_sg7-grpc.xvless.xyz
     server: *akrab4
     port: 443
-    type: vmess
-    uuid: 4b0f72a5-468d-408e-b43d-6ead2c5d8919
-    alterId: 0
+    type: vless
+    uuid: fcf2512f-80e1-4d16-8bb8-159626e7e97a
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg2grpc.serverip.my.id
+    servername: sg7-grpc.xvless.xyz
     network: grpc
-    grpc-opts: 
+    grpc-opts:
       grpc-service-name: grpc
     udp: true
