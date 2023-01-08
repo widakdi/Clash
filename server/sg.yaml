@@ -105,7 +105,7 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
-    servername: 172.67.73.39
+    servername: sg5.v2vless.xyz
     network: ws
     ws-opts: 
       path: /vless
