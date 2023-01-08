@@ -97,3 +97,18 @@ proxies:
       headers: 
         Host: sg6.v2vless.xyz
     udp: true
+  - name: 1501_sg5.v2vless.xyz_sshocean
+    server: *akrab
+    port: 80
+    type: vless
+    uuid: 3bae6fa2-6655-4661-9484-b015e253bd1f
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: 172.67.73.39
+    network: ws
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: sg5.v2vless.xyz
+    udp: true
