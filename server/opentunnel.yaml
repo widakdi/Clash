@@ -114,7 +114,7 @@ proxies:
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-  - name: 0901_cepet_sgx-1
+  - name: 1501_cepet_sgv-1
     server: *akrab2
     port: 80
     type: vless
@@ -127,5 +127,5 @@ proxies:
     ws-opts:
       path: /u/opentunnel.net-nyobakae
       headers:
-        Host: sgx-1.openv2ray.com
+        Host: sgv-1.openv2ray.com
     udp: true
