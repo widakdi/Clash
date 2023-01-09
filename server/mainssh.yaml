@@ -51,6 +51,62 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
+  - name: 1701_sg2mgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: c6228150-c7f8-444a-9dd2-3f0c1cbfd569
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2mgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vmessgrpc
+    udp: true
+  - name: 1601_sg2lws.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 1866d564-d2b0-4f20-8279-382ac119282d
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: sg2lws.mainssh.xyz
+    udp: true
+  - name: 1601_sg2mws.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 3286f948-d22c-4e37-9b23-66e3b2751f8c
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2mws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vmess
+      headers: 
+        Host: sg2mws.mainssh.xyz
+    udp: true
+  - name: 1601_sg2tgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: trojan
+    password: mainssh-widakdikwj
+    skip-cert-verify: true
+    sni: sg2tgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: trojangrpc
+    udp: true
   - name: 1601_sg3lws.mainssh.xyz
     server: *akrab4
     port: 443
@@ -96,21 +152,6 @@ proxies:
       headers: 
         Host: sg3mws.mainssh.xyz
     udp: true
-  - name: 1601_sg2lws.mainssh.xyz
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 1866d564-d2b0-4f20-8279-382ac119282d
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2lws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: sg2lws.mainssh.xyz
-    udp: true
   - name: 1101_sglws.mainssh.xyz
     server: *akrab4
     port: 443
@@ -153,22 +194,6 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 1601_sg2mws.mainssh.xyz
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 3286f948-d22c-4e37-9b23-66e3b2751f8c
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2mws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vmess
-      headers: 
-        Host: sg2mws.mainssh.xyz
-    udp: true
   - name: 1601_sg3tgrpc.mainssh.xyz
     server: *akrab4
     port: 443
@@ -176,17 +201,6 @@ proxies:
     password: mainssh-nyobatrojan
     skip-cert-verify: true
     sni: sg3tgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: trojangrpc
-    udp: true
-  - name: 1601_sg2tgrpc.mainssh.xyz
-    server: *akrab4
-    port: 443
-    type: trojan
-    password: mainssh-widakdikwj
-    skip-cert-verify: true
-    sni: sg2tgrpc.mainssh.xyz
     network: grpc
     grpc-opts: 
       grpc-service-name: trojangrpc
