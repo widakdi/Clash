@@ -100,7 +100,7 @@ proxies:
         Host: sgv-4.openv2ray.com
     udp: true
   - name: 0901_cepet_sgx-1
-    server: *akrab2
+    server: *akrab4
     port: 80
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
@@ -115,7 +115,7 @@ proxies:
         Host: sgx-1.openv2ray.com
     udp: true
   - name: 1501_sgv-1
-    server: *akrab2
+    server: *akrab4
     port: 80
     type: vless
     uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
