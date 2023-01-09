@@ -191,3 +191,16 @@ proxies:
     grpc-opts: 
       grpc-service-name: trojangrpc
     udp: true
+  - name: 1601_sg3tws.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: trojan
+    password: mainssh-opoksjhh
+    skip-cert-verify: true
+    sni: sg3tws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /trojan
+      headers: 
+        Host: sg3tws.mainssh.xyz
+    udp: true
