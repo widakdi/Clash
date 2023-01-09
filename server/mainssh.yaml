@@ -180,3 +180,14 @@ proxies:
     grpc-opts: 
       grpc-service-name: trojangrpc
     udp: true
+  - name: 1601_sg2tgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: trojan
+    password: mainssh-widakdikwj
+    skip-cert-verify: true
+    sni: sg2tgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: trojangrpc
+    udp: true
