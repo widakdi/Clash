@@ -66,11 +66,11 @@ proxies:
       headers: 
         Host: sg3lws.mainssh.xyz
     udp: true
-  - name: 0901_sg3mgrpc.mainssh.xyz
+  - name: 1601_sg3mgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vmess
-    uuid: b352a080-30a1-402c-a1bb-00c923ad7c88
+    uuid: 6262df1b-c781-4636-a642-d1bd48710410
     alterId: 0
     cipher: auto
     tls: true
@@ -95,6 +95,21 @@ proxies:
       path: /vmess
       headers: 
         Host: sg3mws.mainssh.xyz
+    udp: true
+  - name: 1601_sg2lws.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 1866d564-d2b0-4f20-8279-382ac119282d
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: sg2lws.mainssh.xyz
     udp: true
   - name: 1101_sglws.mainssh.xyz
     server: *akrab4
