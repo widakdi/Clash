@@ -114,7 +114,7 @@ proxies:
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-  - name: 1501_cepet_sgv-1
+  - name: 1501_sgv-1
     server: *akrab2
     port: 80
     type: vless
