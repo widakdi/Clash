@@ -153,3 +153,19 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
+  - name: 1601_sg2mws.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 3286f948-d22c-4e37-9b23-66e3b2751f8c
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2mws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vmess
+      headers: 
+        Host: sg2mws.mainssh.xyz
+    udp: true
