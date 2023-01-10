@@ -111,3 +111,18 @@ proxies:
       headers: 
         Host: sg1.vless.co
     udp: true
+  - name: 1701_sg1-v.sshmax.xyz
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 81c9613f-d8a0-4d73-969f-a4e031c9b697
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1-v.sshmax.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sg1-v.sshmax.xyz
+    udp: true
