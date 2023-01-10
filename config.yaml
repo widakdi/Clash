@@ -121,7 +121,7 @@ proxy-groups:
   - DIRECT
   - MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
   - OPENTUNNEL
-  - SINGAPURA (CAMPURAN)
+  - LAINNYA
   - SSHKIT
   - ID
 - name: MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
@@ -134,11 +134,11 @@ proxy-groups:
   disable-udp: false
   use:
   - OPENTUNNEL
-- name: SINGAPURA (CAMPURAN)
+- name: LAINNYA
   type: select
   disable-udp: false
   use:
-  - SG
+  - LAINNYA
 - name: SSHKIT
   type: select
   disable-udp: false
@@ -168,7 +168,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 99
-  SG:
+  LAINNYA:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sg.yaml"
     interval: 3600
