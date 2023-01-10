@@ -96,21 +96,6 @@ proxies:
       headers: 
         Host: sg5.v2vless.xyz
     udp: true
-  - name: 1601_sg1.vless.co_fastssh
-    server: 172.67.73.39
-    port: 443
-    type: vless
-    uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg1.vless.co
-    network: ws
-    ws-opts: 
-      path: /fastssh/kkokjh/63bb698cb2d5b/
-      headers: 
-        Host: sg1.vless.co
-    udp: true
   - name: 1701_sg1-v.sshmax.xyz
     server: *akrab4
     port: 443
