@@ -180,11 +180,11 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1601_sgmgrpc.mainssh.xyz
+  - name: 1901_sgmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vmess
-    uuid: fe218306-4f26-49ea-a57f-908ab5646fb7
+    uuid: 55ff032f-68d0-4117-8c73-b31737ed401c
     alterId: 0
     cipher: auto
     tls: true
