@@ -67,22 +67,7 @@ proxies:
       headers: 
         Host: idv-2.openv2ray.com
     udp: true
-  - name: 0201_idlws.mainssh.xyz_mainssh-idbrooo
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 3d107d34-1c46-441b-ab52-e4c61eeb7134
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: idlws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: idlws.mainssh.xyz
-    udp: true
-    - name: 1801_idmgrpc.mainssh.xyz
+  - name: 1801_idmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vmess
