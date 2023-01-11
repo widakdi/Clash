@@ -81,3 +81,16 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
+  - name: 1801_id6-grpc.xvless.xyz
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: fcef4bd1-4b15-498d-81fc-5d7f5cf614cd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: id6-grpc.xvless.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: grpc
+    udp: true
