@@ -136,11 +136,11 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 1201_sg3mws.mainssh.xyz
+  - name: 1901_sg3mws.mainssh.xyz
     server: *akrab4
     port: 443
     type: vmess
-    uuid: 36fa20fa-9c31-4f39-b0a7-e62603cb5a76
+    uuid: 6452bd5a-b40a-4dbf-8c90-658d1211495d
     alterId: 0
     cipher: auto
     tls: true
