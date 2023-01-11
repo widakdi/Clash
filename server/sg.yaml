@@ -126,3 +126,17 @@ proxies:
       headers:
         Host: cdn-sg1-vless.tunnel.cx
     udp: true
+  - name: 1801_usmgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 348d8c4c-f39d-4dec-9070-01960f176096
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: usmgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vmessgrpc
+    udp: true
