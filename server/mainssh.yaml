@@ -51,7 +51,7 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1701_sg2mgrpc.mainssh.xyz
+  - name: 1701_sg2mgrpc
     server: *akrab4
     port: 443
     type: vmess
@@ -65,7 +65,7 @@ proxies:
     grpc-opts:
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 1601_sg2lws.mainssh.xyz
+  - name: 1601_sg2lws
     server: *akrab4
     port: 443
     type: vless
@@ -80,7 +80,7 @@ proxies:
       headers: 
         Host: sg2lws.mainssh.xyz
     udp: true
-  - name: 1601_sg2mws.mainssh.xyz
+  - name: 1601_sg2mws
     server: *akrab4
     port: 443
     type: vmess
@@ -96,7 +96,20 @@ proxies:
       headers: 
         Host: sg2mws.mainssh.xyz
     udp: true
-  - name: 1601_sg2tgrpc.mainssh.xyz
+  - name: 1901_sg2lgrpc
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: b4d4f504-29ae-4269-8daf-7feddc73e7de
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
+    udp: true
+  - name: 1601_sg2tgrpc
     server: *akrab4
     port: 443
     type: trojan
@@ -107,7 +120,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: trojangrpc
     udp: true
-  - name: 1601_sg3lws.mainssh.xyz
+  - name: 1601_sg3lws
     server: *akrab4
     port: 443
     type: vless
@@ -122,7 +135,7 @@ proxies:
       headers: 
         Host: sg3lws.mainssh.xyz
     udp: true
-  - name: 1601_sg3mgrpc.mainssh.xyz
+  - name: 1601_sg3mgrpc
     server: *akrab4
     port: 443
     type: vmess
@@ -136,7 +149,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 1901_sg3mws.mainssh.xyz
+  - name: 1901_sg3mws
     server: *akrab4
     port: 443
     type: vmess
@@ -152,7 +165,20 @@ proxies:
       headers: 
         Host: sg3mws.mainssh.xyz
     udp: true
-  - name: 1901_sglgrpc.mainssh.xyz
+  - name: 1901_sg3lgrpc
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 8dcdc25e-ec54-45e4-928d-e4dbcd0da469
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3lgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
+    udp: true
+  - name: 1901_sglgrpc
     server: *akrab4
     port: 443
     type: vless
@@ -165,7 +191,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1901_sgmgrpc.mainssh.xyz
+  - name: 1901_sgmgrpc
     server: *akrab4
     port: 443
     type: vmess
@@ -179,7 +205,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 1601_sg3tgrpc.mainssh.xyz
+  - name: 1601_sg3tgrpc
     server: *akrab4
     port: 443
     type: trojan
@@ -190,7 +216,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: trojangrpc
     udp: true
-  - name: 1601_sg3tws.mainssh.xyz
+  - name: 1601_sg3tws
     server: *akrab4
     port: 443
     type: trojan
