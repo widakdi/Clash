@@ -5,9 +5,9 @@ redir-port: 9797
 tproxy-port: 0
 mode: rule
 allow-lan: true
-unified-delay: true
+unified-delay: false
 bind-address: '*'
-log-level: silent
+log-level: info
 ipv6: true
 geodata-mode: true
 geodata-loader: memconservative
