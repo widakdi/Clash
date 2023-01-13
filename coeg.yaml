@@ -1,0 +1,86 @@
+proxies:
+proxy-groups:
+- name: PILIH GRUP SERVER
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
+  - OPENTUNNEL
+  - LAINNYA
+  - SSHKIT
+  - ID
+- name: MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
+  type: select
+  disable-udp: false
+  use:
+  - MAINSSH
+- name: OPENTUNNEL
+  type: select
+  disable-udp: false
+  use:
+  - OPENTUNNEL
+- name: LAINNYA
+  type: select
+  disable-udp: false
+  use:
+  - LAINNYA
+- name: SSHKIT
+  type: select
+  disable-udp: false
+  use:
+  - SSHKIT
+- name: ID
+  type: select
+  disable-udp: false
+  use:
+  - ID
+proxy-providers:
+  MAINSSH:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
+    interval: 3600
+    path: "./server/mainssh.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  OPENTUNNEL:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
+    interval: 3600
+    path: "./server/opentunnel.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  LAINNYA:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/etc.yaml"
+    interval: 3600
+    path: "./server/etc.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  SSHKIT:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
+    interval: 3600
+    path: "./server/sshkit.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  ID:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
+    interval: 3600
+    path: "./server/id.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+rules:
+  - PROCESS-NAME,com.whatsapp,DIRECT
+  - MATCH,PILIH GRUP SERVER
