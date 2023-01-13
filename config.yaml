@@ -8,7 +8,7 @@ allow-lan: true
 unified-delay: false
 bind-address: '*'
 log-level: info
-ipv6: true
+ipv6: false
 geodata-mode: true
 geodata-loader: memconservative
 external-controller: 0.0.0.0:9090
