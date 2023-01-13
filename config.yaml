@@ -1,6 +1,6 @@
 proxies:
 proxy-groups:
-  - name: PILIH GRUP SERVER
+  - name: SELECT
     type: select
     proxies: [MAINSSH, OPENTUNNEL, LAINNYA, SSHKIT, ID, ]
   - name: MAINSSH
@@ -20,7 +20,7 @@ proxy-groups:
     use: [ID]
   - name: ADS-ALL
     type: select
-    proxies: [PILIH GRUP SERVER, REJECT, DIRECT]
+    proxies: [SELECT, REJECT, DIRECT]
 proxy-providers:
   MAINSSH:
     type: http
@@ -63,8 +63,8 @@ proxy-providers:
       url: http://cp.cloudflare.com/generate_204
       interval: 1200
 rules:
-  - GEOSITE,CATEGORY-ADS-ALL,PILIH GRUP SERVER
+  - GEOSITE,CATEGORY-ADS-ALL,SELECT
   - AND,((GEOSITE,YOUTUBE),(NETWORK,UDP)),REJECT
   - IP-CIDR,127.0.0.1/32,REJECT,no-resolve
   - IP-CIDR6,::1/128,REJECT,no-resolve
-  - MATCH,PILIH GRUP SERVER
+  - MATCH,SELECT
