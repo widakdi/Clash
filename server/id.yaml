@@ -51,32 +51,46 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1801_usmgrpc.mainssh.xyz
+  - name: 0201_idv-2.openv2ray.com_opentunnel.net-mantapuk
+    server: *akrab4
+    port: 80
+    type: vmess
+    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+    alterId: 16
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    servername: idv-2.openv2ray.com
+    network: ws
+    ws-opts: 
+      path: /u/opentunnel.net-mantapuk
+      headers: 
+        Host: idv-2.openv2ray.com
+    udp: true
+  - name: 1801_idmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vmess
-    uuid: 348d8c4c-f39d-4dec-9070-01960f176096
+    uuid: 9251e057-7e52-4c4f-bd42-9e848b0fe1c3
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: usmgrpc.mainssh.xyz
+    servername: idmgrpc.mainssh.xyz
     network: grpc
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 2001_usx-1.openv2ray.com
+  - name: 1801_id6-grpc.xvless.xyz
     server: *akrab4
-    port: 80
+    port: 443
     type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    uuid: fcef4bd1-4b15-498d-81fc-5d7f5cf614cd
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
-    servername: usx-1.openv2ray.com
-    network: ws
-    ws-opts: 
-      path: /u/opentunnel.net-tttuhfd
-      headers: 
-        Host: usx-1.openv2ray.com
+    servername: id6-grpc.xvless.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: grpc
     udp: true
