@@ -1,69 +1,82 @@
 proxies:
 proxy-groups:
-- name: "PILIH GRUP SERVER"
-  type: select
-  proxies: [MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit),OPENTUNNEL,LAINNYA,SSHKIT,ID]
-- name: MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
-  type: select
-  use: [MAINSSH]
-- name: OPENTUNNEL
-  type: select
-  use: [OPENTUNNEL]
-- name: LAINNYA
-  type: select
-  use: [LAINNYA]
-- name: SSHKIT
-  type: select
-  use: [SSHKIT]
-- name: ID
-  type: select
-  use: [ID]
+  - name: SELECT
+    type: select
+    proxies: [MAINSSH, OPENTUNNEL, LAINNYA, SSHKIT, ID, ]
+
+  - name: MAINSSH
+    type: select
+    use: [MAINSSH]
+
+  - name: OPENTUNNEL
+    type: select
+    use: [OPENTUNNEL]
+
+  - name: LAINNYA
+    type: select
+    use: [LAINNYA]
+
+  - name: SSHKIT
+    type: select
+    use: [SSHKIT]
+
+  - name: ID
+    type: select
+    use: [ID]
+
+  - name: BEST-PING
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    ninterval: 300
+    use: [MAINSSH]
+
+  - name: ADS-ALL
+    type: select
+    proxies: [SELECT, REJECT, DIRECT]
 proxy-providers:
   MAINSSH:
     type: http
+    path: ./server/mainssh.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
-    interval: 3600
-    path: "./server/mainssh.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 99
+      url: http://cp.cloudflare.com/generate_204
+      interval: 1200
   OPENTUNNEL:
     type: http
+    path: ./server/opentunnel.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
-    interval: 3600
-    path: "./server/opentunnel.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 99
+      url: http://cp.cloudflare.com/generate_204
+      interval: 1200
   LAINNYA:
     type: http
+    path: ./server/etc.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/etc.yaml"
-    interval: 3600
-    path: "./server/etc.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 99
+      url: http://cp.cloudflare.com/generate_204
+      interval: 1200
   SSHKIT:
     type: http
+    path: ./server/sshkit.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
-    interval: 3600
-    path: "./server/sshkit.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 99
+      url: http://cp.cloudflare.com/generate_204
+      interval: 1200
   ID:
     type: http
+    path: ./server/id.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
-    interval: 3600
-    path: "./server/id.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 99
+      url: http://cp.cloudflare.com/generate_204
+      interval: 1200
 rules:
-  - PROCESS-NAME,com.whatsapp,DIRECT
-  - MATCH,PILIH GRUP SERVER
+  - GEOSITE,CATEGORY-ADS-ALL,SELECT
+  - AND,((GEOSITE,YOUTUBE),(NETWORK,UDP)),REJECT
+  - IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  - MATCH,SELECT
