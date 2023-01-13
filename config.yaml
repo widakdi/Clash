@@ -20,6 +20,10 @@ proxy-groups:
     type: select
     use: [SSHKIT]
 
+  - name: ID
+    type: select
+    use: [ID]
+
   - name: ADS-ALL
     type: select
     proxies: [SELECT, REJECT, DIRECT]
@@ -41,7 +45,7 @@ proxy-providers:
       url: http://cp.cloudflare.com/generate_204
       interval: 1200
   LAINNYA:
-    type: http
+    type: file
     path: ./server/lain.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
     health-check:
@@ -56,6 +60,15 @@ proxy-providers:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 1200
+  ID:
+    type: http
+    path: ./server/id.yaml
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 1200
+
 rules:
   - GEOSITE,CATEGORY-ADS-ALL,SELECT
   - AND,((GEOSITE,YOUTUBE),(NETWORK,UDP)),REJECT
