@@ -69,7 +69,7 @@ tun:
     # - 10
 dns:
   enable: true
-  ipv6: true # false akan mengembalikan hasil kosong untuk AAAA
+  ipv6: false # false akan mengembalikan hasil kosong untuk AAAA
   prefer-h3: false
   default-nameserver:
     - 8.8.8.8
