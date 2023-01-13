@@ -20,7 +20,7 @@ proxy-groups:
     use: [ID]
   - name: ADS-ALL
     type: select
-    proxies: [SELECT, REJECT, DIRECT]
+    proxies: [PILIH GRUP SERVER, REJECT, DIRECT]
 proxy-providers:
   MAINSSH:
     type: http
