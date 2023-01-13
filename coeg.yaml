@@ -1,40 +1,23 @@
 proxies:
 proxy-groups:
-- name: PILIH GRUP SERVER
+- name: "PILIH GRUP SERVER"
   type: select
-  disable-udp: false
-  proxies:
-  - DIRECT
-  - MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
-  - OPENTUNNEL
-  - LAINNYA
-  - SSHKIT
-  - ID
+  proxies: [DIRECT,MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit),OPENTUNNEL,LAINNYA,SSHKIT,ID]
 - name: MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
   type: select
-  disable-udp: false
-  use:
-  - MAINSSH
+  use: [MAINSSH]
 - name: OPENTUNNEL
   type: select
-  disable-udp: false
-  use:
-  - OPENTUNNEL
+  use: [OPENTUNNEL]
 - name: LAINNYA
   type: select
-  disable-udp: false
-  use:
-  - LAINNYA
+  use: [LAINNYA]
 - name: SSHKIT
   type: select
-  disable-udp: false
-  use:
-  - SSHKIT
+  use: [SSHKIT]
 - name: ID
   type: select
-  disable-udp: false
-  use:
-  - ID
+  use: [ID]
 proxy-providers:
   MAINSSH:
     type: http
