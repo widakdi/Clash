@@ -76,7 +76,7 @@ proxies:
     servername: usx-1.openv2ray.com
     network: ws
     ws-opts: 
-      path: null
+      path: /u/opentunnel.net-tttuhfd
       headers: 
         Host: usx-1.openv2ray.com
     udp: true
