@@ -2,7 +2,7 @@ proxies:
 proxy-groups:
 - name: "PILIH GRUP SERVER"
   type: select
-  proxies: [DIRECT,MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit),OPENTUNNEL,LAINNYA,SSHKIT,ID]
+  proxies: [MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit),OPENTUNNEL,LAINNYA,SSHKIT,ID]
 - name: MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
   type: select
   use: [MAINSSH]
