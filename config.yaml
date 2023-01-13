@@ -3,34 +3,33 @@ proxy-groups:
   - name: SELECT
     type: select
     proxies: [MAINSSH, OPENTUNNEL, LAINNYA, SSHKIT, ID, ]
-
   - name: MAINSSH
     type: select
     use: [MAINSSH]
-
   - name: OPENTUNNEL
     type: select
     use: [OPENTUNNEL]
-
   - name: LAINNYA
     type: select
     use: [LAINNYA]
-
   - name: SSHKIT
     type: select
     use: [SSHKIT]
-
   - name: ID
     type: select
     use: [ID]
-
+  - name: BEST-PING
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    ninterval: 300
+    use: [MAINSSH]
   - name: ADS-ALL
     type: select
     proxies: [SELECT, REJECT, DIRECT]
 proxy-providers:
   MAINSSH:
     type: http
-    path: ./server/mainssh.yaml
+    path: ./proxy-providers/mainssh.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
     health-check:
       enable: true
@@ -38,15 +37,15 @@ proxy-providers:
       interval: 1200
   OPENTUNNEL:
     type: http
-    path: ./server/opentunnel.yaml
+    path: ./proxy-providers/opentunnel.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 1200
   LAINNYA:
-    type: file
-    path: ./server/lain.yaml
+    type: http
+    path: ./proxy-providers/lain.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
     health-check:
       enable: true
@@ -54,7 +53,7 @@ proxy-providers:
       interval: 1200
   SSHKIT:
     type: http
-    path: ./server/sshkit.yaml
+    path: ./proxy-providers/sshkit.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
     health-check:
       enable: true
@@ -62,13 +61,12 @@ proxy-providers:
       interval: 1200
   ID:
     type: http
-    path: ./server/id.yaml
+    path: ./proxy-providers/id.yaml
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 1200
-
 rules:
   - GEOSITE,CATEGORY-ADS-ALL,SELECT
   - AND,((GEOSITE,YOUTUBE),(NETWORK,UDP)),REJECT
