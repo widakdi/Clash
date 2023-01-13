@@ -52,8 +52,8 @@ proxy-providers:
       interval: 1200
   LAINNYA:
     type: http
-    path: ./server/etc.yaml
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/etc.yaml"
+    path: ./server/dll.yaml
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/dll.yaml"
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
