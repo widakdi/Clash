@@ -81,6 +81,21 @@ proxies:
       headers:
         Host: sg1-v.sshmax.xyz
     udp: true
+  - name: 1701_cdn-sg1-vless.tunnel.cx_akunssh-kooknhu
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 0e7bbbba-903f-11ed-a130-bbda7f28d442
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cdn-sg1-vless.tunnel.cx
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: cdn-sg1-vless.tunnel.cx
+    udp: true
   - name: 1801_usmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
@@ -94,19 +109,4 @@ proxies:
     network: grpc
     grpc-opts: 
       grpc-service-name: vmessgrpc
-    udp: true
-  - name: 2001_usx-1.openv2ray.com
-    server: *akrab4
-    port: 80
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: usx-1.openv2ray.com
-    network: ws
-    ws-opts: 
-      path: null
-      headers: 
-        Host: usx-1.openv2ray.com
     udp: true
