@@ -81,21 +81,6 @@ proxies:
       headers:
         Host: sg1-v.sshmax.xyz
     udp: true
-  - name: 1701_cdn-sg1-vless.tunnel.cx_akunssh-kooknhu
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 0e7bbbba-903f-11ed-a130-bbda7f28d442
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: cdn-sg1-vless.tunnel.cx
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: cdn-sg1-vless.tunnel.cx
-    udp: true
   - name: 1801_usmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
