@@ -51,7 +51,7 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1501_cepet_sgv-5
+  - name: 2101_sgv-5
     server: *akrab4
     port: 80
     type: vmess
@@ -63,11 +63,11 @@ proxies:
     servername: sgv-5.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-widakdikw
+      path: /u/opentunnel.net-widakdi
       headers:
         Host: sgv-5.openv2ray.com
     udp: true
-  - name: 1501_cepet_sgv-6
+  - name: 2101_sgv-6
     server: *akrab4
     port: 80
     type: vmess
@@ -79,7 +79,7 @@ proxies:
     servername: sgv-6.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-widakdikw
+      path: /u/opentunnel.net-widakdi
       headers:
         Host: sgv-6.openv2ray.com
     udp: true
