@@ -51,36 +51,6 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1301_sg7.v2vless.xyz_sshocean
-    server: *akrab4
-    port: 80
-    type: vless
-    uuid: 31ba9f53-c8bc-4b93-9a3b-5192f9ba0b0d
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sg7.v2vless.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: sg7.v2vless.xyz
-    udp: true
-  - name: 1301_sg6.v2vless.xyz_sshocean
-    server: *akrab4
-    port: 80
-    type: vless
-    uuid: 61c4bd22-6653-498a-9a8e-7f8137060879
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sg6.v2vless.xyz
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: sg6.v2vless.xyz
-    udp: true
   - name: 1501_sg5.v2vless.xyz_sshocean
     server: *akrab4
     port: 80
@@ -111,21 +81,6 @@ proxies:
       headers:
         Host: sg1-v.sshmax.xyz
     udp: true
-  - name: 1701_cdn-sg1-vless.tunnel.cx_akunssh-kooknhu
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 0e7bbbba-903f-11ed-a130-bbda7f28d442
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: cdn-sg1-vless.tunnel.cx
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: cdn-sg1-vless.tunnel.cx
-    udp: true
   - name: 1801_usmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
@@ -139,4 +94,19 @@ proxies:
     network: grpc
     grpc-opts: 
       grpc-service-name: vmessgrpc
+    udp: true
+  - name: 2001_usx-1.openv2ray.com
+    server: *akrab4
+    port: 80
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: usx-1.openv2ray.com
+    network: ws
+    ws-opts: 
+      path: null
+      headers: 
+        Host: usx-1.openv2ray.com
     udp: true
