@@ -137,7 +137,7 @@ proxies:
     uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
     alterId: 16
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
