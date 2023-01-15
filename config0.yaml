@@ -4,12 +4,12 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - DIRECT
   - MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)
   - OPENTUNNEL
   - LAINNYA
   - SSHKIT
   - ID
+  - DIRECT
 - name: "MAINSSH (server tidak bisa digunakan saat jam 6 dan 12 selama 30-60menit)"
   type: select
   disable-udp: false
