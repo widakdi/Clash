@@ -156,3 +156,19 @@ proxies:
       headers: 
         Host: sgcvless.ipservers.xyz
     udp: true
+  - name: 2301_sg8-ray.ipservers.xyz
+    server: *akrab4
+    port: 80
+    type: vmess
+    uuid: 99f6ad02-9167-4c62-bad1-61d615406343
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    servername: 
+    network: ws
+    ws-opts: 
+      path: /JAGOANSSH/
+      headers: 
+        Host: sg8-ray.ipservers.xyz
+    udp: true
