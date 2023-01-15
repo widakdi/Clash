@@ -99,3 +99,19 @@ proxies:
       headers: 
         Host: sg2-v2ray.sshkit.org
     udp: true
+  - name: 2201_sg-lb.vhax.net
+    server: *akrab4
+    port: 80
+    type: vmess
+    uuid: 6fea1649-425b-4092-bf53-29792152c925
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    servername: 
+    network: ws
+    ws-opts: 
+      path: /sshkit/asukowe/63c4004043034/
+      headers: 
+        Host: sg-lb.vhax.net
+    udp: true
