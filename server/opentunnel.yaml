@@ -83,7 +83,7 @@ proxies:
       headers:
         Host: sgv-6.openv2ray.com
     udp: true
-  - name: 1501_cepet_sgv-4
+  - name: 2201_sgv-4
     server: *akrab4
     port: 80
     type: vmess
@@ -95,11 +95,11 @@ proxies:
     servername: sgv-4.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-matane
+      path: /u/opentunnel.net-widakdi
       headers:
         Host: sgv-4.openv2ray.com
     udp: true
-  - name: 1601_cepet_sgx-1
+  - name: 1601_sgx-1
     server: *akrab4
     port: 80
     type: vless
@@ -114,7 +114,7 @@ proxies:
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
-  - name: 1501_cepet_sgv-1
+  - name: 2201_cepet_sgv-1
     server: *akrab4
     port: 80
     type: vmess
@@ -126,7 +126,7 @@ proxies:
     servername: sgv-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-nyobakae
+      path: /u/opentunnel.net-widakdi
       headers:
         Host: sgv-1.openv2ray.com
     udp: true
