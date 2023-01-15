@@ -141,3 +141,18 @@ proxies:
       headers: 
         Host: sg5vless.ipservers.xyz
     udp: true
+  - name: 1502_sgcvless.ipservers.xyz_jagoanssh
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 662209b4-4b5a-4261-888a-e48525ffda9e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgcvless.ipservers.xyz
+    network: ws
+    ws-opts: 
+      path: /jagoanssh
+      headers: 
+        Host: sgcvless.ipservers.xyz
+    udp: true
