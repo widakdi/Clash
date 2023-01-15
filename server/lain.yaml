@@ -119,7 +119,7 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: false
-    servername: 
+    servername: vm.sg.goserver.pw
     network: ws
     ws-opts: 
       path: /v2ray-vmess/ntls
