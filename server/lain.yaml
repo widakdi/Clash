@@ -51,20 +51,34 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1501_sg5.v2vless.xyz_sshocean
+  - name: 1502_sgcvless.ipservers.xyz_jagoanssh
     server: *akrab4
-    port: 80
+    port: 443
     type: vless
-    uuid: 3bae6fa2-6655-4661-9484-b015e253bd1f
+    uuid: 662209b4-4b5a-4261-888a-e48525ffda9e
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
-    servername: sg5.v2vless.xyz
+    servername: sgcvless.ipservers.xyz
     network: ws
     ws-opts: 
-      path: /vless
+      path: /jagoanssh
       headers: 
-        Host: sg5.v2vless.xyz
+        Host: sgcvless.ipservers.xyz
+    udp: true
+  - name: 1801_cepet_usmgrpc.mainssh.xyz
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 348d8c4c-f39d-4dec-9070-01960f176096
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: usmgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vmessgrpc
     udp: true
   - name: 1701_sg1-v.sshmax.xyz
     server: *akrab4
@@ -80,20 +94,6 @@ proxies:
       path: /vless
       headers:
         Host: sg1-v.sshmax.xyz
-    udp: true
-  - name: 1801_usmgrpc.mainssh.xyz
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 348d8c4c-f39d-4dec-9070-01960f176096
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: usmgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vmessgrpc
     udp: true
   - name: 2001_usx-1.openv2ray.com
     server: *akrab4
@@ -140,21 +140,6 @@ proxies:
       path: /jagoanssh
       headers: 
         Host: sg5vless.ipservers.xyz
-    udp: true
-  - name: 1502_sgcvless.ipservers.xyz_jagoanssh
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 662209b4-4b5a-4261-888a-e48525ffda9e
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgcvless.ipservers.xyz
-    network: ws
-    ws-opts: 
-      path: /jagoanssh
-      headers: 
-        Host: sgcvless.ipservers.xyz
     udp: true
   - name: 2301_sg8-ray.ipservers.xyz
     server: *akrab4
