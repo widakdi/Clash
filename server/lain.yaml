@@ -80,6 +80,22 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
+  - name: 1602_sg.goserver.pw-tls-gamingssh-uyuky
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 4802e851-dd4d-41c6-9df0-06e59e1f6169
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg.goserver.pw
+    network: ws
+    ws-opts:
+      path: /v2ray-vmess/tls
+      headers:
+        Host: sg.goserver.pw
+    udp: true
   - name: 1801_cepet_usmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
