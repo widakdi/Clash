@@ -51,11 +51,11 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1701_sg2mgrpc
+  - name: 2401_sg2mgrpc
     server: *akrab4
     port: 443
     type: vmess
-    uuid: c6228150-c7f8-444a-9dd2-3f0c1cbfd569
+    uuid: 5f99aa00-17a2-43c9-b1c2-d0d7f79b4163
     alterId: 0
     cipher: auto
     tls: true
@@ -177,4 +177,20 @@ proxies:
     network: grpc
     grpc-opts: 
       grpc-service-name: vmessgrpc
+    udp: true
+  - name: 2401_sg2dns.mainssh.xyz
+    server: ^akrab4
+    port: 443
+    type: vmess
+    uuid: 60f4413b-7e03-412b-9a70-f73b3033ae67
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2dns.mainssh.xyz
+    network: ws
+    ws-opts:
+      path: /v2raydns
+      headers:
+        Host: sg2dns.mainssh.xyz
     udp: true
