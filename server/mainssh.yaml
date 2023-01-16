@@ -179,7 +179,7 @@ proxies:
       grpc-service-name: vmessgrpc
     udp: true
   - name: 2401_sg2dns.mainssh.xyz
-    server: ^akrab4
+    server: *akrab4
     port: 443
     type: vmess
     uuid: 60f4413b-7e03-412b-9a70-f73b3033ae67
