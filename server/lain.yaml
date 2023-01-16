@@ -66,6 +66,20 @@ proxies:
       headers: 
         Host: sgcvless.ipservers.xyz
     udp: true
+  - name: 1602_sgmgrpc.serverip.my.id_serverssh-fghfhfhg
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 898a923e-91ab-4e61-907e-4c86d4f76925
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgmgrpc.serverip.my.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
   - name: 1801_cepet_usmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
