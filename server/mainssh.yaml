@@ -51,48 +51,6 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 2401_sg2mgrpc
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 5f99aa00-17a2-43c9-b1c2-d0d7f79b4163
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2mgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vmessgrpc
-    udp: true
-  - name: 2301_sg2lws
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 55310c8d-e195-4599-9b03-85ac508283fb
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2lws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: sg2lws.mainssh.xyz
-    udp: true
-  - name: 1901_sg2lgrpc
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: b4d4f504-29ae-4269-8daf-7feddc73e7de
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2lgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vlessgrpc
-    udp: true
   - name: 2301_sg3lws
     server: *akrab4
     port: 443
@@ -151,32 +109,47 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1901_sglgrpc
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 39be8c0c-f373-4240-975b-3c88e10f0ab6
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sglgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vlessgrpc
-    udp: true
-  - name: 1901_sgmgrpc
+  - name: 2401_sg2mgrpc
     server: *akrab4
     port: 443
     type: vmess
-    uuid: 55ff032f-68d0-4117-8c73-b31737ed401c
+    uuid: 5f99aa00-17a2-43c9-b1c2-d0d7f79b4163
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sgmgrpc.mainssh.xyz
+    servername: sg2mgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: vmessgrpc
+    udp: true
+  - name: 2301_sg2lws
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 55310c8d-e195-4599-9b03-85ac508283fb
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: sg2lws.mainssh.xyz
+    udp: true
+  - name: 1901_sg2lgrpc
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: b4d4f504-29ae-4269-8daf-7feddc73e7de
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2lgrpc.mainssh.xyz
     network: grpc
     grpc-opts: 
-      grpc-service-name: vmessgrpc
+      grpc-service-name: vlessgrpc
     udp: true
   - name: 2401_sg2dns.mainssh.xyz
     server: *akrab4
