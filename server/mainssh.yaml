@@ -51,21 +51,6 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 2301_sg3lws
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: bde43844-20fd-4584-b72e-6f41b067905b
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3lws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: sg3lws.mainssh.xyz
-    udp: true
   - name: 2301_sg3mgrpc
     server: *akrab4
     port: 443
@@ -95,6 +80,21 @@ proxies:
       path: /vmess
       headers: 
         Host: sg3mws.mainssh.xyz
+    udp: true
+  - name: 2301_sg3lws
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: bde43844-20fd-4584-b72e-6f41b067905b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3lws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: sg3lws.mainssh.xyz
     udp: true
   - name: 1901_sg3lgrpc
     server: *akrab4
