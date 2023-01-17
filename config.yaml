@@ -1,0 +1,225 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: false
+  use-host: true
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - +.nflxvideo.net
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.mcdn.bilivideo.cn"
+    - +.media.dssott.com
+proxies:
+proxy-groups:
+  - name: "PILIH-MODE ⛈️🌏"
+    type: select
+    proxies: [OTOMATIS-LOADBALANCE,MANUAL,MAINSSH-BP,OPENTUNNEL-BP,DIRECT]
+
+  - name: "MANUAL"
+    type: select
+    use: [OPENTUNNEL,MAINSSH,SSHKIT,LAINNYA,ID]
+
+  - name: "MAINSSH-BP"
+    type: url-test
+    use: [MAINSSH]
+
+  - name: "OPENTUNNEL-BP"
+    type: url-test
+    use: [OPENTUNNEL]
+
+#  - name: "🤷-BP"
+#    type: url-test
+#    use: [LAINNYA]
+
+#  - name: "SSHKIT-BP"
+#    type: url-test
+#    url: http://www.gstatic.com/generate_204
+#    interval: 100
+#    use: [SSHKIT]
+
+  - name: "OTOMATIS-LOADBALANCE"
+    type: load-balance
+    strategy: round-robin
+    url: http://www.gstatic.com/generate_204
+    interval: 900
+    proxies: [MAINSSH-BP,OPENTUNNEL-BP,]
+
+#  - name: "FB-BP"
+#    type: fallback
+#    url: http://www.gstatic.com/generate_204
+#    interval: 100
+#    proxies: [BEST-PING]
+
+#  - name: BEST-PING
+#    type: url-test
+#    url: http://cp.cloudflare.com/generate_204
+#    ninterval: 300
+#    use: [MAINSSH,OPENTUNNEL,LAINNYA,SSHKIT,ID]
+
+proxy-providers:
+  MAINSSH:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/mainssh.yaml"
+    interval: 3600
+    path: "./server/mainssh.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  OPENTUNNEL:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
+    interval: 3600
+    path: "./server/opentunnel.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  LAINNYA:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
+    interval: 3600
+    path: "./server/lain.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1000
+  SSHKIT:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
+    interval: 3600
+    path: "./server/sshkit.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1000
+  ID:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
+    interval: 3600
+    path: "./server/id.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 1000
+rules:
+  - PROCESS-NAME, com.whatsapp, DIRECT
+  - MATCH,PILIH-MODE ⛈️🌏
