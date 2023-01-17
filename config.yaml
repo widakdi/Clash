@@ -159,7 +159,7 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     url: http://www.gstatic.com/generate_204
-    interval: 900
+    interval: 300
     proxies: [MAINSSH-BP,OPENTUNNEL-BP,]
 
 #  - name: "FB-BP"
@@ -183,7 +183,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300
+      interval: 100
   OPENTUNNEL:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
@@ -192,7 +192,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 300
+      interval: 100
   LAINNYA:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
