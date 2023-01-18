@@ -131,7 +131,7 @@ proxies:
 proxy-groups:
   - name: "PILIH-MODE ⛈️🌏"
     type: select
-    proxies: [OTOMATIS-LOADBALANCE,MANUAL,MAINSSH-BP,OPENTUNNEL-BP,DIRECT]
+    proxies: [OTOMATIS,MANUAL,MAINSSH-BP,OPENTUNNEL-BP,DIRECT]
 
   - name: "MANUAL"
     type: select
@@ -155,7 +155,7 @@ proxy-groups:
 #    interval: 100
 #    use: [SSHKIT]
 
-  - name: "OTOMATIS-LOADBALANCE"
+  - name: "OTOMATIS"
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
