@@ -156,11 +156,11 @@ proxy-groups:
 #    use: [SSHKIT]
 
   - name: "OTOMATIS"
-    type: load-balance
-    strategy: consistent-hashing
+    type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 200
     proxies: [MAINSSH-BP,OPENTUNNEL-BP,]
+#    strategy: consistent-hashing
 
 #  - name: "FB-BP"
 #    type: fallback
