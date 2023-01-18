@@ -96,11 +96,11 @@ proxies:
       headers:
         Host: sg.goserver.pw
     udp: true
-  - name: 1801_cepet_usmgrpc.mainssh.xyz
+  - name: 2501_cepet_usmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
     type: vmess
-    uuid: 348d8c4c-f39d-4dec-9070-01960f176096
+    uuid: 245cfa78-cec9-4df5-8c81-a11dce37ddb0
     alterId: 0
     cipher: auto
     tls: true
