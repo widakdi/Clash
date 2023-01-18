@@ -157,7 +157,7 @@ proxy-groups:
 
   - name: "OTOMATIS-LOADBALANCE"
     type: load-balance
-    strategy: round-robin
+    strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 200
     proxies: [MAINSSH-BP,OPENTUNNEL-BP,]
