@@ -159,7 +159,7 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 200
     proxies: [MAINSSH-BP,OPENTUNNEL-BP,]
 
 #  - name: "FB-BP"
