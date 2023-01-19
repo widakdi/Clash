@@ -110,7 +110,7 @@ proxies:
     servername: sgx-1.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-matano
+      path: /u/opentunnel.net-qwertyu
       headers:
         Host: sgx-1.openv2ray.com
     udp: true
