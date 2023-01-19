@@ -8,6 +8,13 @@ proxy-groups:
     type: select
     use: [OPENTUNNEL,MAINSSH,SG,SSHKIT,LAINNYA,ID]
 
+  - name: "OTOMATIS"
+    type: url-test
+    proxies: [MAINSSH-LB,OPENTUNNEL-LB,SG-LB]
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+#    strategy: consistent-hashing
+
   - name: "MAINSSH-LB"
     type: load-balance
     use: [MAINSSH]
@@ -26,13 +33,6 @@ proxy-groups:
 #  - name: "SSHKIT-LB"
 #    type: load-balance
 #    use: [SSHKIT]
-#    strategy: consistent-hashing
-
-  - name: "OTOMATIS"
-    type: url-test
-    proxies: [MAINSSH-LB,OPENTUNNEL-LB,SG-LB]
-    url: http://www.gstatic.com/generate_204
-    interval: 600
 #    strategy: consistent-hashing
 
 #  - name: "FB-BP"
