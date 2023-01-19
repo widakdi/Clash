@@ -51,51 +51,6 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1502_sgcvless.ipservers.xyz_jagoanssh
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 662209b4-4b5a-4261-888a-e48525ffda9e
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgcvless.ipservers.xyz
-    network: ws
-    ws-opts: 
-      path: /jagoanssh
-      headers: 
-        Host: sgcvless.ipservers.xyz
-    udp: true
-  - name: 1602_sgmgrpc.serverip.my.id_serverssh-fghfhfhg
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 898a923e-91ab-4e61-907e-4c86d4f76925
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgmgrpc.serverip.my.id
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc
-    udp: true
-  - name: 1602_sg.goserver.pw-tls-gamingssh-uyuky
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 4802e851-dd4d-41c6-9df0-06e59e1f6169
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg.goserver.pw
-    network: ws
-    ws-opts:
-      path: /v2ray-vmess/tls
-      headers:
-        Host: sg.goserver.pw
-    udp: true
   - name: 2501_cepet_usmgrpc.mainssh.xyz
     server: *akrab4
     port: 443
@@ -110,34 +65,4 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 2201_sg5vless.ipservers.xyz_jagoanssh
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: ee7583ea-79b5-4527-93de-55e1193c0783
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg5vless.ipservers.xyz
-    network: ws
-    ws-opts: 
-      path: /jagoanssh
-      headers: 
-        Host: sg5vless.ipservers.xyz
-    udp: true
-  - name: 2301_sg8-ray.ipservers.xyz
-    server: *akrab4
-    port: 80
-    type: vmess
-    uuid: 99f6ad02-9167-4c62-bad1-61d615406343
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: 
-    network: ws
-    ws-opts: 
-      path: /JAGOANSSH/
-      headers: 
-        Host: sg8-ray.ipservers.xyz
-    udp: true
+
