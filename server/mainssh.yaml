@@ -51,36 +51,6 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 2301_sg3mgrpc
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: ece82607-cf70-4855-a99c-dc79b4141dca
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3mgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vmessgrpc
-    udp: true
-  - name: 1901_sg3mws
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 6452bd5a-b40a-4dbf-8c90-658d1211495d
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3mws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vmess
-      headers: 
-        Host: sg3mws.mainssh.xyz
-    udp: true
   - name: 2301_sg3lws
     server: *akrab4
     port: 443
@@ -96,11 +66,41 @@ proxies:
       headers: 
         Host: sg3lws.mainssh.xyz
     udp: true
-  - name: 1901_sg3lgrpc
+  - name: 2301_sg3mgrpc
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: ece82607-cf70-4855-a99c-dc79b4141dca
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3mgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vmessgrpc
+    udp: true
+  - name: 2601_sg3mws
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: e2a90ac2-f4b7-447d-9be4-a5af36cef27a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3mws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vmess
+      headers: 
+        Host: sg3mws.mainssh.xyz
+    udp: true
+  - name: 2601_sg3lgrpc
     server: *akrab4
     port: 443
     type: vless
-    uuid: 8dcdc25e-ec54-45e4-928d-e4dbcd0da469
+    uuid: 8f13ee6a-9173-4458-82d2-eec5acd3801d
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -138,11 +138,11 @@ proxies:
       headers: 
         Host: sg2lws.mainssh.xyz
     udp: true
-  - name: 1901_sg2lgrpc
+  - name: 2601_sg2lgrpc
     server: *akrab4
     port: 443
     type: vless
-    uuid: b4d4f504-29ae-4269-8daf-7feddc73e7de
+    uuid: af861d26-a42c-41d3-8fa1-d8f3299ad90e
     cipher: auto
     tls: true
     skip-cert-verify: true
