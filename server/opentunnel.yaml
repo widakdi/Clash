@@ -99,7 +99,7 @@ proxies:
       headers:
         Host: sgv-4.openv2ray.com
     udp: true
-  - name: 2401_sgx-1
+  - name: 2601_sgx-1
     server: *akrab4
     port: 80
     type: vless
