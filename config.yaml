@@ -2,7 +2,7 @@ proxies:
 proxy-groups:
   - name: "PILIH-MODE ⛈️🌏"
     type: select
-    proxies: [OTOMATIS,MANUAL,MAINSSH-LB,OPENTUNNEL-LB,SG-LB,SSHKIT-LB,DIRECT]
+    proxies: [OTOMATIS,MANUAL,MAINSSH-LB,OPENTUNNEL-LB,SG-LB,DIRECT]
 
   - name: "MANUAL"
     type: select
@@ -30,7 +30,7 @@ proxy-groups:
 
   - name: "OTOMATIS"
     type: url-test
-    proxies: [MAINSSH-LB,OPENTUNNEL-LB,SG-LB,SSHKIT-LB]
+    proxies: [MAINSSH-LB,OPENTUNNEL-LB,SG-LB]
     url: http://www.gstatic.com/generate_204
     interval: 600
 #    strategy: consistent-hashing
