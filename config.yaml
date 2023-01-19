@@ -23,10 +23,10 @@ proxy-groups:
     use: [SG]
     strategy: consistent-hashing
 
-  - name: "SSHKIT-LB"
-    type: load-balance
-    use: [SSHKIT]
-    strategy: consistent-hashing
+#  - name: "SSHKIT-LB"
+#    type: load-balance
+#    use: [SSHKIT]
+#    strategy: consistent-hashing
 
   - name: "OTOMATIS"
     type: url-test
