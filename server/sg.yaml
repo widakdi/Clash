@@ -1,0 +1,130 @@
+akrab:
+  - &akrab1 104.17.3.81
+  - &akrab2 172.64.149.82
+  - &akrab3 188.114.97.12
+  - &akrab4 172.67.73.39
+  - &akrab5 104.18.38.174
+  - &akrab6 172.67.199.34
+  - &akrab7 141.193.213.20
+  - &akrab8 141.193.213.21
+  - &akrab9 104.20.74.141
+  - &akrab10 104.20.75.141
+  - &akrab11 104.18.11.39
+  - &akrab12 104.18.10.39
+  - &akrab13 104.18.2.2
+  - &akrab14 104.18.21.226
+  - &akrab15 104.21.21.147
+  - &akrab16 104.26.5.10
+  - &akrab17 104.26.4.10
+  - &akrab18 104.18.24.243
+  - &akrab19 104.18.25.243
+  - &akrab20 104.18.26.28
+  - &akrab21 104.18.27.28
+  - &akrab22 104.18.30.9
+  - &akrab23 104.18.31.9
+  - &akrab24 104.17.2.81
+  - &akrab25 104.21.21.104
+  - &akrab26 104.21.10.162
+  - &akrab27 104.21.4.109
+  - &akrab28 104.21.16.163
+  - &akrab29 104.21.6.56
+  - &akrab30 104.21.12.167
+  - &akrab31 172.67.70.14
+  - &akrab32 104.26.14.59
+  - &akrab33 104.26.15.59
+  - &akrab34 170.114.46.0
+  - &akrab35 104.21.21.107
+  - &akrab36 172.67.199.34
+  - &akrab37 104.17.71.206
+  - &akrab38 104.17.70.206
+  - &akrab39 104.21.1.180
+  - &akrab40 104.21.1.229
+  - &akrab41 104.16.42.102
+  - &akrab42 104.16.43.102
+  - &akrab43 104.18.211.56
+  - &akrab44 104.18.24.139
+  - &akrab45 104.18.211.56
+  - &akrab46 172.67.182.69
+  - &akrab47 104.21.32.17
+  - &akrab48 104.26.4.126
+flex:
+  - &flex 104.22.2.25
+
+proxies:
+  - name: 1502_sgcvless.ipservers.xyz_jagoanssh
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 662209b4-4b5a-4261-888a-e48525ffda9e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgcvless.ipservers.xyz
+    network: ws
+    ws-opts: 
+      path: /jagoanssh
+      headers: 
+        Host: sgcvless.ipservers.xyz
+    udp: true
+  - name: 1602_sgmgrpc.serverip.my.id_serverssh-fghfhfhg
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 898a923e-91ab-4e61-907e-4c86d4f76925
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgmgrpc.serverip.my.id
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
+  - name: 1602_sg.goserver.pw-tls-gamingssh-uyuky
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 4802e851-dd4d-41c6-9df0-06e59e1f6169
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg.goserver.pw
+    network: ws
+    ws-opts:
+      path: /v2ray-vmess/tls
+      headers:
+        Host: sg.goserver.pw
+    udp: true
+  - name: 2201_sg5vless.ipservers.xyz_jagoanssh
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: ee7583ea-79b5-4527-93de-55e1193c0783
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg5vless.ipservers.xyz
+    network: ws
+    ws-opts: 
+      path: /jagoanssh
+      headers: 
+        Host: sg5vless.ipservers.xyz
+    udp: true
+  - name: 2301_sg8-ray.ipservers.xyz
+    server: *akrab4
+    port: 80
+    type: vmess
+    uuid: 99f6ad02-9167-4c62-bad1-61d615406343
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    servername: 
+    network: ws
+    ws-opts: 
+      path: /JAGOANSSH/
+      headers: 
+        Host: sg8-ray.ipservers.xyz
+    udp: true
+
