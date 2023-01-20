@@ -2,19 +2,22 @@ proxies:
 proxy-groups:
   - name: "PILIH-GRUP-SERVER"
     type: select
-    proxies: [MAINSSH (beberapa server offline saat jam 6/12 selama 30-60menit), OPENTUNNEL, LAINNYA, SSHKIT, ID, DIRECT, ]
+    proxies: [MAINSSH (beberapa server offline saat jam 6/12 selama 30-60menit), OPENTUNNEL, SG, SSHKIT, LAINNYA, ID, DIRECT, ]
   - name: "MAINSSH (beberapa server offline saat jam 6/12 selama 30-60menit)"
     type: select
     use: [MAINSSH]
   - name: "OPENTUNNEL"
     type: select
     use: [OPENTUNNEL]
-  - name: "LAINNYA"
+  - name: "SG"
     type: select
-    use: [LAINNYA]
+    use: [SG]
   - name: "SSHKIT"
     type: select
     use: [SSHKIT]
+  - name: "LAINNYA"
+    type: select
+    use: [LAINNYA]
   - name: "ID"
     type: select
     use: [ID]
@@ -22,7 +25,7 @@ proxy-groups:
 #    type: url-test
 #    url: http://cp.cloudflare.com/generate_204
 #    ninterval: 300
-#    use: [MAINSSH,OPENTUNNEL,LAINNYA,SSHKIT,ID]
+#    use: [MAINSSH,OPENTUNNEL,SG, SSHKIT, LAINNYA, ID]
 
 proxy-providers:
   MAINSSH:
@@ -45,9 +48,9 @@ proxy-providers:
       interval: 99
   LAINNYA:
     type: http
-    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sg.yaml"
     interval: 3600
-    path: "./server/lain.yaml"
+    path: "./server/sg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -57,6 +60,15 @@ proxy-providers:
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
     interval: 3600
     path: "./server/sshkit.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 99
+  LAINNYA:
+    type: http
+    url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
+    interval: 3600
+    path: "./server/lain.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
