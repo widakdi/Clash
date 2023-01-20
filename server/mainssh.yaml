@@ -123,21 +123,6 @@ proxies:
     grpc-opts:
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 2301_sg2lws
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 55310c8d-e195-4599-9b03-85ac508283fb
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2lws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vless
-      headers: 
-        Host: sg2lws.mainssh.xyz
-    udp: true
   - name: 2601_sg2lgrpc
     server: *akrab4
     port: 443
