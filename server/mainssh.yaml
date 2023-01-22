@@ -163,3 +163,12 @@ proxies:
     grpc-opts: 
       grpc-service-name: trojangrpc
     udp: true
+  - name: 2901_sg3tcp
+    server: *akrab4
+    port: 443
+    type: trojan
+    password: mainssh-unilagi
+    skip-cert-verify: true
+    sni: sg3tcp.mainssh.xyz
+    network: tcp
+    udp: true
