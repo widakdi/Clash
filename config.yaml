@@ -2,24 +2,31 @@ proxies:
 proxy-groups:
   - name: "PILIH-GRUP-SERVER"
     type: select
-    proxies: [MAINSSH (beberapa server offline saat jam 6/12 selama 30-60menit), OPENTUNNEL, SG, SSHKIT, LAINNYA, ID, DIRECT, ]
-  - name: "MAINSSH (beberapa server offline saat jam 6/12 selama 30-60menit)"
+    disable-udp: false
+    proxies: [MAINSSH, OPENTUNNEL, SG, SSHKIT, LAINNYA, ID, DIRECT, ]
+  - name: "MAINSSH"
     type: select
+    disable-udp: false
     use: [MAINSSH]
   - name: "OPENTUNNEL"
     type: select
+    disable-udp: false
     use: [OPENTUNNEL]
   - name: "SG"
     type: select
+    disable-udp: false
     use: [SG]
   - name: "SSHKIT"
     type: select
+    disable-udp: false
     use: [SSHKIT]
   - name: "LAINNYA"
     type: select
+    disable-udp: false
     use: [LAINNYA]
   - name: "ID"
     type: select
+    disable-udp: false
     use: [ID]
 #  - name: BEST-PING
 #    type: url-test
@@ -35,7 +42,7 @@ proxy-providers:
     path: "./server/mainssh.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 99
   OPENTUNNEL:
     type: http
@@ -44,7 +51,7 @@ proxy-providers:
     path: "./server/opentunnel.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 99
   SG:
     type: http
@@ -53,7 +60,7 @@ proxy-providers:
     path: "./server/sg.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 99
   SSHKIT:
     type: http
@@ -62,7 +69,7 @@ proxy-providers:
     path: "./server/sshkit.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 99
   LAINNYA:
     type: http
@@ -71,7 +78,7 @@ proxy-providers:
     path: "./server/lain.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 99
   ID:
     type: http
@@ -80,7 +87,7 @@ proxy-providers:
     path: "./server/id.yaml"
     health-check:
       enable: true
-      url: http://www.gstatic.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 99
 rules:
   - PROCESS-NAME, com.whatsapp, DIRECT
