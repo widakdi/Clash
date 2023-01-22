@@ -96,11 +96,11 @@ proxies:
       headers:
         Host: sg.goserver.pw
     udp: true
-  - name: 2201_sg5vless.ipservers.xyz_jagoanssh
+  - name: 2901_sg5vless_jagoanssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: ee7583ea-79b5-4527-93de-55e1193c0783
+    uuid: 010a1ce2-83ba-453a-b394-b20634781cd6
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -111,7 +111,7 @@ proxies:
       headers: 
         Host: sg5vless.ipservers.xyz
     udp: true
-  - name: 2301_sg8-ray.ipservers.xyz
+  - name: 2301_sg8-ray_jagoanssh
     server: *akrab4
     port: 80
     type: vmess
