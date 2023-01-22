@@ -130,7 +130,7 @@ proxies:
       headers:
         Host: sgv-1.openv2ray.com
     udp: true
-  - name: 2401_cepet_sgv-1
+  - name: 2401_cepet_sgv-2
     server: *akrab4
     port: 80
     type: vmess
