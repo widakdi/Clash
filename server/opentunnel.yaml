@@ -146,29 +146,4 @@ proxies:
       headers:
         Host: sgv-2.openv2ray.com
     udp: true
-  - name: 2801_sgt-1
-    server: *akrab4
-    port: 443
-    type: trojan
-    password: opentunnel.net-widakdi
-    skip-cert-verify: true
-    sni: sgt-1.opensvr.net
-    udp: true
-  - name: 2801_sgt-3
-    server: *akrab4
-    port: 443
-    type: trojan
-    password: opentunnel.net-widakdi
-    skip-cert-verify: true
-    sni: sgt-3.opensvr.net
-    udp: true
-  - name: 1902_sgt-3
-    server: *akrab4
-    port: 443
-    type: trojan
-    password: opentunnel.net-widakdi
-    skip-cert-verify: true
-    sni: sgt-3.opensvr.net
-    network: tcp
-    udp: true
 
