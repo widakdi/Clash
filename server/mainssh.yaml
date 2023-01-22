@@ -152,3 +152,14 @@ proxies:
       headers:
         Host: sg2dns.mainssh.xyz
     udp: true
+  - name: 2901_sgtgrpc
+    server: *akrab4
+    port: 443
+    type: trojan
+    password: mainssh-unicoba
+    skip-cert-verify: true
+    sni: sgtgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: trojangrpc
+    udp: true
