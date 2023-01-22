@@ -162,4 +162,13 @@ proxies:
     skip-cert-verify: true
     sni: sgt-3.opensvr.net
     udp: true
+  - name: 1902_sgt-3
+    server: *akrab4
+    port: 443
+    type: trojan
+    password: opentunnel.net-widakdi
+    skip-cert-verify: true
+    sni: sgt-3.opensvr.net
+    network: tcp
+    udp: true
 
