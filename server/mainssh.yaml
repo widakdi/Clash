@@ -109,7 +109,7 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 2401_sg2mgrpc
+  - name: 3001_sg2mgrpc
     server: *akrab4
     port: 443
     type: vmess
