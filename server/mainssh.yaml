@@ -113,7 +113,7 @@ proxies:
     server: *akrab4
     port: 443
     type: vmess
-    uuid: 5f99aa00-17a2-43c9-b1c2-d0d7f79b4163
+    uuid: 7b29bc86-2b39-419c-a5c8-a945c05fee4f
     alterId: 0
     cipher: auto
     tls: true
