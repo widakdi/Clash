@@ -125,4 +125,18 @@ proxies:
     grpc-opts: 
       grpc-service-name: grpc
     udp: true
+  - name: 3101_sg1grpc_serverssh
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 9a61e37a-f6f4-48fb-953b-e1b06e1010ce
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1grpc.serverip.my.id
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: grpc
+    udp: true
 
