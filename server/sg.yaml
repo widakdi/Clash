@@ -140,7 +140,7 @@ proxies:
       grpc-service-name: grpc
     udp: true
   - name: 3101_sgovh1-grpc_sshocean
-    server: bug
+    server: *akrab4
     port: 443
     type: vless
     uuid: ae18a6a6-2ba8-435f-9f12-1bad5d2b5e78
