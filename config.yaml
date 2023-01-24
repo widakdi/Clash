@@ -43,7 +43,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 99
+      interval: 300
   OPENTUNNEL:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
@@ -52,7 +52,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 99
+      interval: 300
   SG:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sg.yaml"
@@ -61,7 +61,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 99
+      interval: 300
   SSHKIT:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
@@ -70,7 +70,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 99
+      interval: 300
   LAINNYA:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
@@ -79,7 +79,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 99
+      interval: 300
   ID:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
@@ -88,7 +88,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 99
+      interval: 300
 rules:
   - PROCESS-NAME, com.whatsapp, DIRECT
   - MATCH,PILIH-GRUP-SERVER
