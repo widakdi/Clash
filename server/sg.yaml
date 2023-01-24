@@ -111,20 +111,18 @@ proxies:
       headers: 
         Host: sg5vless.ipservers.xyz
     udp: true
-  - name: 2301_sg8-ray_jagoanssh
+  - name: 3101_sg2grpc_serverssh
     server: *akrab4
-    port: 80
+    port: 443
     type: vmess
-    uuid: 99f6ad02-9167-4c62-bad1-61d615406343
+    uuid: 925070ed-8577-47be-b12e-0fdac55de1b3
     alterId: 0
     cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: 
-    network: ws
-    ws-opts: 
-      path: /JAGOANSSH/
-      headers: 
-        Host: sg8-ray.ipservers.xyz
+    tls: true
+    skip-cert-verify: true
+    servername: sg2grpc.serverip.my.id
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: grpc
     udp: true
 
