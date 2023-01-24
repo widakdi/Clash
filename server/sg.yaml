@@ -139,4 +139,17 @@ proxies:
     grpc-opts: 
       grpc-service-name: grpc
     udp: true
+  - name: 3101_sgovh1-grpc_sshocean
+    server: bug
+    port: 443
+    type: vless
+    uuid: ae18a6a6-2ba8-435f-9f12-1bad5d2b5e78
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgovh1-grpc.xvless.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: grpc
+    udp: true
 
