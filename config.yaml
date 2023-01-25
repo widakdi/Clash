@@ -3,23 +3,23 @@ proxy-groups:
   - name: "PILIH-GRUP-SERVER"
     type: select
     disable-udp: false
-    proxies: [MAINSSH, OPENTUNNEL, SG, SSHKIT, LAINNYA, ID, DIRECT, ]
-  - name: "MAINSSH"
-    type: select
-    disable-udp: false
-    use: [MAINSSH]
-  - name: "OPENTUNNEL"
-    type: select
-    disable-udp: false
-    use: [OPENTUNNEL]
-  - name: "SG"
-    type: select
-    disable-udp: false
-    use: [SG]
+    proxies: [SSHKIT, OPENTUNNEL, MAINSSH, SG, LAINNYA, ID, DIRECT, ]
   - name: "SSHKIT"
     type: select
     disable-udp: false
     use: [SSHKIT]
+  - name: "OPENTUNNEL"
+    type: select
+    disable-udp: false
+    use: [OPENTUNNEL]
+  - name: "MAINSSH"
+    type: select
+    disable-udp: false
+    use: [MAINSSH]
+  - name: "SG"
+    type: select
+    disable-udp: false
+    use: [SG]
   - name: "LAINNYA"
     type: select
     disable-udp: false
