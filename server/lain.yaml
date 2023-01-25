@@ -65,4 +65,19 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
-
+  - name: 0102_usmws.mainssh.xyz
+    server: 172.67.73.39
+    port: 443
+    type: vmess
+    uuid: 70665836-33a4-48f9-9f5c-ba1a72a57cfe
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: usmws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vmess
+      headers: 
+        Host: usmws.mainssh.xyz
+    udp: true
