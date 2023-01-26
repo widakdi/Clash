@@ -51,20 +51,6 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 2501_cepet_usmgrpc.mainssh.xyz
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 245cfa78-cec9-4df5-8c81-a11dce37ddb0
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: usmgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vmessgrpc
-    udp: true
   - name: 0102_usmws.mainssh.xyz
     server: 172.67.73.39
     port: 443
