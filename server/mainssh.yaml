@@ -80,11 +80,11 @@ proxies:
     grpc-opts: 
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 2601_sg3mws
+  - name: 0202_sg3mws
     server: *akrab4
     port: 443
     type: vmess
-    uuid: e2a90ac2-f4b7-447d-9be4-a5af36cef27a
+    uuid: ff733700-64d7-463e-a280-3008e7105eb1
     alterId: 0
     cipher: auto
     tls: true
@@ -96,11 +96,11 @@ proxies:
       headers: 
         Host: sg3mws.mainssh.xyz
     udp: true
-  - name: 2601_sg3lgrpc
+  - name: 0202_sg3lgrpc
     server: *akrab4
     port: 443
     type: vless
-    uuid: 8f13ee6a-9173-4458-82d2-eec5acd3801d
+    uuid: cb0c97f0-6769-454d-be16-f2002efebe22
     cipher: auto
     tls: true
     skip-cert-verify: true
