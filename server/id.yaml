@@ -51,11 +51,11 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 2601idlgrpc.mainssh.xyz
-    server: bughost.mainssh.com
+  - name: 0202_idlgrpc.mainssh.xyz
+    server: *akrab4
     port: 443
     type: vless
-    uuid: fa48301f-4f98-4226-909d-0c4fc53b575e
+    uuid: eb04375b-a2b8-47aa-806d-908be2314cbe
     cipher: auto
     tls: true
     skip-cert-verify: true
