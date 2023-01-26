@@ -67,7 +67,7 @@ proxies:
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
-  - name: 0102_sg2_nurul
+  - name: 0102_sg2_nrl
     server: *akrab4
     port: 80
     type: vmess
@@ -83,7 +83,7 @@ proxies:
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
-  - name: 0802_sg2_fahreza
+  - name: 0802_sg2_fhrz
     server: *akrab4
     port: 80
     type: vmess
