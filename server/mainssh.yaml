@@ -123,11 +123,11 @@ proxies:
     grpc-opts:
       grpc-service-name: vmessgrpc
     udp: true
-  - name: 2601_sg2lgrpc
+  - name: 0202_sg2lgrpc
     server: *akrab4
     port: 443
     type: vless
-    uuid: af861d26-a42c-41d3-8fa1-d8f3299ad90e
+    uuid: fe907aca-4ce6-44e8-88a7-9918100f38af
     cipher: auto
     tls: true
     skip-cert-verify: true
