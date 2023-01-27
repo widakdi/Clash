@@ -147,6 +147,22 @@ proxies:
       headers: 
         Host: sg1-v2ray.sshkit.org
     udp: true
+  - name: 2602_sg1_lswtn
+    server: 172.67.73.39
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1-v2ray.sshkit.org
+    network: ws
+    ws-opts: 
+      path: /sshkit/5207496782/63d39af8ea25e/
+      headers: 
+        Host: sg1-v2ray.sshkit.org
+    udp: true
   - name: 2201_sg-lb.vhax.net_tls
     server: *akrab4
     port: 443
