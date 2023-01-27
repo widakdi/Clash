@@ -153,4 +153,20 @@ proxies:
     grpc-opts: 
       grpc-service-name: grpc
     udp: true
+  - name: 0302_dns-sg3.ipservers.xyz
+    server: 172.67.73.39
+    port: 443
+    type: vmess
+    uuid: a50200a6-c48b-4966-8643-8d05dd4b54d2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3-ray.ipservers.xyz
+    network: ws
+    ws-opts: 
+      path: /JAGOANSSH/
+      headers: 
+        Host: sg3-ray.ipservers.xyz
+    udp: true
 
