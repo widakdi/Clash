@@ -169,4 +169,20 @@ proxies:
       headers: 
         Host: sg3-ray.ipservers.xyz
     udp: true
+  - name: 0302_sg6-ray_jagoanssh
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 48319040-eba9-4006-8ce3-f1042216681a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg6-ray.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /JAGOANSSH/
+      headers:
+        Host: sg6-ray.ipservers.xyz
+    udp: true
 
