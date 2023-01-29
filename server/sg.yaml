@@ -110,21 +110,6 @@ proxies:
       headers:
         Host: sg.goserver.pw
     udp: true
-  - name: 2901_sg5vless_jagoanssh
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 010a1ce2-83ba-453a-b394-b20634781cd6
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg5vless.ipservers.xyz
-    network: ws
-    ws-opts: 
-      path: /jagoanssh
-      headers: 
-        Host: sg5vless.ipservers.xyz
-    udp: true
   - name: 3101_sg2grpc_serverssh
     server: *akrab4
     port: 443
@@ -185,4 +170,20 @@ proxies:
       headers:
         Host: sg6-ray.ipservers.xyz
     udp: true
+  - name: 0502_sg5vless_jagoanssh
+    server: *akrab4
+    port: 443
+    type: vless
+    uuid: 38eec500-9967-4ad9-bf36-4b5a1b4a09d3
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg5vless.ipservers.xyz
+    network: ws
+    ws-opts: 
+      path: /jagoanssh
+      headers: 
+        Host: sg5vless.ipservers.xyz
+    udp: true
+
 
