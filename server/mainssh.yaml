@@ -51,11 +51,11 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 3001_sg3lws
+  - name: 0702_sg3lws
     server: *akrab4
     port: 443
     type: vless
-    uuid: a0ee4025-d01f-450f-b844-0e95373a96cd
+    uuid: 66f795ca-d559-4f91-abd0-69470cb4d670
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -65,36 +65,6 @@ proxies:
       path: /vless
       headers: 
         Host: sg3lws.mainssh.xyz
-    udp: true
-  - name: 3001_sg3mgrpc
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: cf252c59-f436-4532-9038-cc6173978d92
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3mgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vmessgrpc
-    udp: true
-  - name: 0202_sg3mws
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: ff733700-64d7-463e-a280-3008e7105eb1
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3mws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vmess
-      headers: 
-        Host: sg3mws.mainssh.xyz
     udp: true
   - name: 0202_sg3lgrpc
     server: *akrab4
@@ -108,20 +78,6 @@ proxies:
     network: grpc
     grpc-opts: 
       grpc-service-name: vlessgrpc
-    udp: true
-  - name: 3001_sg2mgrpc
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 7b29bc86-2b39-419c-a5c8-a945c05fee4f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2mgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts:
-      grpc-service-name: vmessgrpc
     udp: true
   - name: 0202_sg2lgrpc
     server: *akrab4
