@@ -92,11 +92,11 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 3101_sg2dns.mainssh.xyz
+  - name: 0702_sg2dns
     server: *akrab4
     port: 443
     type: vmess
-    uuid: 7d41ef32-f58b-4f7b-a93a-e759e11ab0b7
+    uuid: 89b09aed-0a79-4606-9201-74c2a91ca621
     alterId: 0
     cipher: auto
     tls: true
