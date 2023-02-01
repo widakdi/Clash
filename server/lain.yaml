@@ -51,19 +51,16 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0102_usmws.mainssh.xyz
+  - name: 0802_uslgrpc.mainssh.xyz
     server: 172.67.73.39
     port: 443
-    type: vmess
-    uuid: 70665836-33a4-48f9-9f5c-ba1a72a57cfe
-    alterId: 0
+    type: vless
+    uuid: 25248e52-cb70-4896-9905-47cdd444c798
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: usmws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vmess
-      headers: 
-        Host: usmws.mainssh.xyz
+    servername: uslgrpc.mainssh.xyz
+    network: grpc
+    grpc-opts: 
+      grpc-service-name: vlessgrpc
     udp: true
