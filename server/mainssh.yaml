@@ -67,6 +67,22 @@ proxies:
       headers: 
         Host: sg3mws.mainssh.xyz
     udp: true
+  - name: 0902_sg2mws
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 81ccb0db-f34e-4103-96ef-d6a468de29bf
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg2mws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vmess
+      headers: 
+        Host: sg2mws.mainssh.xyz
+    udp: true
   - name: 0702_sg3lws
     server: *akrab4
     port: 443
