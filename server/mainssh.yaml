@@ -51,6 +51,22 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
+  - name: 0902_sg3mws
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: 0f3b9028-107f-47f0-8700-55cf3081989a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3mws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vmess
+      headers: 
+        Host: sg3mws.mainssh.xyz
+    udp: true
   - name: 0702_sg3lws
     server: *akrab4
     port: 443
