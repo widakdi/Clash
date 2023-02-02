@@ -79,11 +79,11 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 0202_sg2lgrpc
+  - name: 0902_sg2lgrpc
     server: *akrab4
     port: 443
     type: vless
-    uuid: fe907aca-4ce6-44e8-88a7-9918100f38af
+    uuid: 30c2a39e-29e3-4e89-ac5f-184ac912b927
     cipher: auto
     tls: true
     skip-cert-verify: true
