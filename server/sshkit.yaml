@@ -67,7 +67,7 @@ proxies:
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
-  - name: 0102_sg2_nrl
+  - name: 0503_sg2_nrl
     server: *akrab4
     port: 80
     type: vmess
@@ -79,7 +79,7 @@ proxies:
     servername: sg2-v2ray.sshkit.org
     network: ws
     ws-opts:
-      path: /sshkit/1453093006/63b2b06fc2a40/
+      path: /sshkit/1453093006/63dc6cce454c9/
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
@@ -112,6 +112,22 @@ proxies:
     network: ws
     ws-opts: 
       path: /sshkit/582191343/63d0788f235e9/
+      headers: 
+        Host: sg3-v2ray.sshkit.org
+    udp: true
+  - name: 0503_sg3_nrl
+    server: *akrab4
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg3-v2ray.sshkit.org
+    network: ws
+    ws-opts: 
+      path: /sshkit/1453093006/63dc6d004dbe5/
       headers: 
         Host: sg3-v2ray.sshkit.org
     udp: true
