@@ -76,7 +76,7 @@ proxies:
     servername: idv-2.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-widakdi
+      path: /u/opentunnel.net-widakdikw
       headers:
         Host: idv-2.openv2ray.com
     udp: true
