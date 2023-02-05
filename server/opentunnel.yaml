@@ -99,7 +99,7 @@ proxies:
       headers:
         Host: sgv-4.openv2ray.com
     udp: true
-  - name: 0402_sgv-1
+  - name: 1202_sgv-1
     server: *akrab4
     port: 443
     type: vmess
@@ -130,7 +130,7 @@ proxies:
       headers: 
         Host: sgx-1.openv2ray.com
     udp: true
-  - name: 0402_sgv-2_tls
+  - name: 1202_sgv-2_tls
     server: *akrab4
     port: 443
     type: vmess
