@@ -83,11 +83,11 @@ proxies:
       headers: 
         Host: sg2mws.mainssh.xyz
     udp: true
-  - name: 0702_sg3lws
+  - name: 1502_sg3lws
     server: *akrab4
     port: 443
     type: vless
-    uuid: 66f795ca-d559-4f91-abd0-69470cb4d670
+    uuid: d4e87af1-3b3b-42b2-a78d-4956c090a6e1
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -98,18 +98,20 @@ proxies:
       headers: 
         Host: sg3lws.mainssh.xyz
     udp: true
-  - name: 0702_sg3lgrpc
+  - name: 1502_sg2lws
     server: *akrab4
     port: 443
     type: vless
-    uuid: 0430f5b6-4240-4978-a463-10effb9b03ed
+    uuid: 3eadf6bb-1872-4ee0-8898-6b27bae11bd3
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sg3lgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vlessgrpc
+    servername: sg2lws.mainssh.xyz
+    network: ws
+    ws-opts: 
+      path: /vless
+      headers: 
+        Host: sg2lws.mainssh.xyz
     udp: true
   - name: 0902_sg2lgrpc
     server: *akrab4
