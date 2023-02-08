@@ -126,27 +126,11 @@ proxies:
     grpc-opts: 
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 0702_sg2dns
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 89b09aed-0a79-4606-9201-74c2a91ca621
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2dns.mainssh.xyz
-    network: ws
-    ws-opts:
-      path: /v2raydns
-      headers:
-        Host: sg2dns.mainssh.xyz
-    udp: true
-  - name: 0702_sgtgrpc
+  - name: 1502_sgtgrpc
     server: *akrab4
     port: 443
     type: trojan
-    password: mainssh-mbjjkjgggg
+    password: mainssh-tenanpora
     skip-cert-verify: true
     sni: sgtgrpc.mainssh.xyz
     network: grpc
