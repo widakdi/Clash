@@ -94,59 +94,11 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
-  - name: 2002_sg.goserver.pw-tls_gamingssh
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 17843c78-567a-43d1-ab1e-1d76b3cf886c
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg.goserver.pw
-    network: ws
-    ws-opts:
-      path: /v2ray-vmess/tls
-      headers:
-        Host: sg.goserver.pw
-    udp: true
-  - name: 0302_dns-sg3.ipservers.xyz
-    server: 172.67.73.39
-    port: 443
-    type: vmess
-    uuid: a50200a6-c48b-4966-8643-8d05dd4b54d2
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3-ray.ipservers.xyz
-    network: ws
-    ws-opts: 
-      path: /JAGOANSSH/
-      headers: 
-        Host: sg3-ray.ipservers.xyz
-    udp: true
-  - name: 0302_sg6-ray_jagoanssh
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 48319040-eba9-4006-8ce3-f1042216681a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg6-ray.ipservers.xyz
-    network: ws
-    ws-opts:
-      path: /JAGOANSSH/
-      headers:
-        Host: sg6-ray.ipservers.xyz
-    udp: true
-  - name: 0502_sg5vless_jagoanssh
+  - name: 1502_sg5vless_jagoanssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: 38eec500-9967-4ad9-bf36-4b5a1b4a09d3
+    uuid: ac517c9c-b571-4d0b-bbe2-34496ea72376
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -157,11 +109,11 @@ proxies:
       headers: 
         Host: sg5vless.ipservers.xyz
     udp: true
-  - name: 0502_sg3vless_jagoanssh
+  - name: 1502_sg3vless_jagoanssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: 2b3c2819-b5e3-492c-b00d-7bfc13b57470
+    uuid: ea93f2a8-7a1a-460e-8448-47d7233ee29f
     cipher: auto
     tls: true
     skip-cert-verify: true
