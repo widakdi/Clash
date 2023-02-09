@@ -92,5 +92,4 @@ proxy-providers:
 rules:
   - PROCESS-NAME, com.whatsapp, DIRECT
   - PROCESS-NAME, com.asobimo.toramonline, DIRECT
-  - PROCESS-NAME, com.vivaldi.browser, DIRECT
   - MATCH,PILIH-GRUP-SERVER
