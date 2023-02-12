@@ -83,7 +83,7 @@ proxies:
       headers:
         Host: sg2-v2ray.sshkit.org
     udp: true
-  - name: 0802_sg2_fhrz
+  - name: 1203_sg2_fhrz
     server: *akrab4
     port: 80
     type: vmess
@@ -95,7 +95,7 @@ proxies:
     servername: 
     network: ws
     ws-opts: 
-      path: /sshkit/1559457081/63bbdfd65933d/
+      path: /sshkit/1559457081/63e6154ab8edb/
       headers: 
         Host: sg2-v2ray.sshkit.org
     udp: true
@@ -195,3 +195,20 @@ proxies:
       headers: 
         Host: sg-lb.vhax.net
     udp: true
+  - name: 1203_sg1_fhrz
+    server: 172.67.73.39
+    port: 443
+    type: vmess
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sg1-v2ray.sshkit.org
+    network: ws
+    ws-opts: 
+      path: /sshkit/1559457081/63e615cfe00e0/
+      headers: 
+        Host: sg1-v2ray.sshkit.org
+    udp: true
+
