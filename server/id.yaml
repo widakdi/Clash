@@ -64,19 +64,19 @@ proxies:
     grpc-opts:
       grpc-service-name: vlessgrpc
     udp: true
-  - name: 1102_idv-2_tls
+  - name: 2202_id-lb.vhax.net_tls
     server: *akrab4
     port: 443
     type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
+    uuid: 6fea1649-425b-4092-bf53-29792152c925
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: idv-2.openv2ray.com
+    servername: id-lb.vhax.net
     network: ws
-    ws-opts:
-      path: /u/opentunnel.net-widakdikw
-      headers:
-        Host: idv-2.openv2ray.com
+    ws-opts: 
+      path: /sshkit/widakdi/63ecd9fb6573c/
+      headers: 
+        Host: id-lb.vhax.net
     udp: true
