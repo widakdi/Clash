@@ -51,43 +51,11 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0902_sg3mws
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 0f3b9028-107f-47f0-8700-55cf3081989a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg3mws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vmess
-      headers: 
-        Host: sg3mws.mainssh.xyz
-    udp: true
-  - name: 0902_sg2mws
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: 81ccb0db-f34e-4103-96ef-d6a468de29bf
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2mws.mainssh.xyz
-    network: ws
-    ws-opts: 
-      path: /vmess
-      headers: 
-        Host: sg2mws.mainssh.xyz
-    udp: true
-  - name: 1502_sg3lws
+  - name: 2202_sg3lws
     server: *akrab4
     port: 443
     type: vless
-    uuid: d4e87af1-3b3b-42b2-a78d-4956c090a6e1
+    uuid: 3845fbd9-9f9d-466f-b2ee-7843a1387397
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -98,11 +66,11 @@ proxies:
       headers: 
         Host: sg3lws.mainssh.xyz
     udp: true
-  - name: 1502_sg2lws
+  - name: 2202_sg2lws
     server: *akrab4
     port: 443
     type: vless
-    uuid: 3eadf6bb-1872-4ee0-8898-6b27bae11bd3
+    uuid: 497e8c56-25d5-4587-866b-e1e19eca41c2
     cipher: auto
     tls: true
     skip-cert-verify: true
