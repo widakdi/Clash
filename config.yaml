@@ -42,8 +42,8 @@ proxy-providers:
     path: "./server/mainssh.yaml"
     health-check:
       enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 300
+      url: http://www.gstatic.com/generate_204
+      interval: 99
   OPENTUNNEL:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/opentunnel.yaml"
@@ -51,8 +51,8 @@ proxy-providers:
     path: "./server/opentunnel.yaml"
     health-check:
       enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 300
+      url: http://www.gstatic.com/generate_204
+      interval: 99
   SG:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sg.yaml"
@@ -60,8 +60,8 @@ proxy-providers:
     path: "./server/sg.yaml"
     health-check:
       enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 300
+      url: http://www.gstatic.com/generate_204
+      interval: 99
   SSHKIT:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/sshkit.yaml"
@@ -69,8 +69,8 @@ proxy-providers:
     path: "./server/sshkit.yaml"
     health-check:
       enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 300
+      url: http://www.gstatic.com/generate_204
+      interval: 99
   LAINNYA:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/lain.yaml"
@@ -78,8 +78,8 @@ proxy-providers:
     path: "./server/lain.yaml"
     health-check:
       enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 300
+      url: http://www.gstatic.com/generate_204
+      interval: 99
   ID:
     type: http
     url: "https://raw.githubusercontent.com/widakdi/Clash/main/server/id.yaml"
@@ -87,8 +87,8 @@ proxy-providers:
     path: "./server/id.yaml"
     health-check:
       enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 300
+      url: http://www.gstatic.com/generate_204
+      interval: 99
 rules:
   - PROCESS-NAME, com.whatsapp, DIRECT
   - PROCESS-NAME, com.asobimo.toramonline, DIRECT
