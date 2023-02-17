@@ -65,11 +65,11 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
-  - name: 1502_sgcvless.ipservers.xyz_jagoanssh
+  - name: 2003_sgcvless.ipservers.xyz_jagoanssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: 662209b4-4b5a-4261-888a-e48525ffda9e
+    uuid: 99882321-4b10-4318-91e8-3feeaba40fa6
     cipher: auto
     tls: true
     skip-cert-verify: true
