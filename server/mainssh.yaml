@@ -81,24 +81,11 @@ proxies:
       headers: 
         Host: sg2lws.mainssh.xyz
     udp: true
-  - name: 0902_sg2lgrpc
-    server: *akrab4
-    port: 443
-    type: vless
-    uuid: 30c2a39e-29e3-4e89-ac5f-184ac912b927
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2lgrpc.mainssh.xyz
-    network: grpc
-    grpc-opts: 
-      grpc-service-name: vlessgrpc
-    udp: true
-  - name: 1502_sgtgrpc
+  - name: 2402_sgtgrpc
     server: *akrab4
     port: 443
     type: trojan
-    password: mainssh-tenanpora
+    password: mainssh-masukpak
     skip-cert-verify: true
     sni: sgtgrpc.mainssh.xyz
     network: grpc
