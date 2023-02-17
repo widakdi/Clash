@@ -113,7 +113,7 @@ proxies:
     server: *akrab4
     port: 443
     type: vless
-    uuid: vless://f15f46f5-7dcd-44d1-8f59-331589afb390
+    uuid: f15f46f5-7dcd-44d1-8f59-331589afb390
     cipher: auto
     tls: true
     skip-cert-verify: true
