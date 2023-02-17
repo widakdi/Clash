@@ -94,7 +94,7 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
-  - name: 2202_sg5vless_jagoanssh
+  - name: 2402_sg5vless_jagoanssh
     server: *akrab4
     port: 443
     type: vless
@@ -109,7 +109,7 @@ proxies:
       headers: 
         Host: sg5vless.ipservers.xyz
     udp: true
-  - name: 2202_sg3vless_jagoanssh
+  - name: 2402_sg3vless_jagoanssh
     server: *akrab4
     port: 443
     type: vless
