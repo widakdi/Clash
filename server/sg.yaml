@@ -80,11 +80,11 @@ proxies:
       headers: 
         Host: sgcvless.ipservers.xyz
     udp: true
-  - name: 1602_sgmgrpc.serverip.my.id_serverssh-fghfhfhg
+  - name: 2103_sgmgrpc.serverip.my.id_serverssh
     server: *akrab4
     port: 443
     type: vmess
-    uuid: 898a923e-91ab-4e61-907e-4c86d4f76925
+    uuid: b591624f-6bb4-47a5-a9ba-cb4942b5911a
     alterId: 0
     cipher: auto
     tls: true
