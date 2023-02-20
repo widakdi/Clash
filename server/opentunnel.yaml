@@ -51,7 +51,7 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1802_sgv-5
+  - name: 2702_sgv-5
     server: *akrab4
     port: 443
     type: vmess
