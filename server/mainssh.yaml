@@ -66,11 +66,11 @@ proxies:
       headers: 
         Host: sg3lws.mainssh.xyz
     udp: true
-  - name: 2202_sg2lws
+  - name: 0103_sg2lws
     server: *akrab4
     port: 443
     type: vless
-    uuid: 497e8c56-25d5-4587-866b-e1e19eca41c2
+    uuid: e3429856-9c1e-4cc9-a489-00837a5482a5
     cipher: auto
     tls: true
     skip-cert-verify: true
