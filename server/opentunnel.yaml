@@ -83,7 +83,7 @@ proxies:
       headers:
         Host: sgv-6.openv2ray.com
     udp: true
-  - name: 2902_sgv-4
+  - name: 0103_sgv-4
     server: *akrab4
     port: 443
     type: vmess
