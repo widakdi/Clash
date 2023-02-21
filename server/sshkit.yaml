@@ -179,7 +179,7 @@ proxies:
       headers: 
         Host: sg1-v2ray.sshkit.org
     udp: true
-  - name: 0301_sg-lb.vhax.net_tls
+  - name: 0103_sg-lb.vhax.net_tls
     server: *akrab4
     port: 443
     type: vmess
