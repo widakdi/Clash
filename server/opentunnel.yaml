@@ -130,7 +130,7 @@ proxies:
       headers: 
         Host: sgx-1.openv2ray.com
     udp: true
-  - name: 2202_sgv-2_tls
+  - name: 0203_sgv-2_tls
     server: *akrab4
     port: 443
     type: vmess
