@@ -51,11 +51,11 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0301_sg3lws
+  - name: 0303_sg3lws
     server: *akrab4
     port: 443
     type: vless
-    uuid: 95f18d7b-e8a5-4a8e-ae78-ca748b9fdcb6@
+    uuid: 3b90deff-0875-46fa-bc7b-3f166364c24b
     cipher: auto
     tls: true
     skip-cert-verify: true
