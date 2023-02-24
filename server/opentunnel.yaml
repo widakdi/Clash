@@ -115,7 +115,7 @@ proxies:
       headers:
         Host: sgv-1.openv2ray.com
     udp: true
-  - name: 1802_sgx-1
+  - name: 0303_sgx-1
     server: 172.67.73.39
     port: 443
     type: vless
@@ -126,7 +126,7 @@ proxies:
     servername: sgx-1.openv2ray.com
     network: ws
     ws-opts: 
-      path: /u/opentunnel.net-widakdikw
+      path: /u/opentunnel.net-widakdi
       headers: 
         Host: sgx-1.openv2ray.com
     udp: true
