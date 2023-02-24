@@ -67,22 +67,6 @@ proxies:
       headers:
         Host: sgv-5.openv2ray.com
     udp: true
-  - name: 2702_sgv-6
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgv-6.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-widakdi
-      headers:
-        Host: sgv-6.openv2ray.com
-    udp: true
   - name: 0103_sgv-4
     server: *akrab4
     port: 443
@@ -99,7 +83,7 @@ proxies:
       headers:
         Host: sgv-4.openv2ray.com
     udp: true
-  - name: 2002_sgv-1
+  - name: 0303_sgv-1
     server: *akrab4
     port: 443
     type: vmess
