@@ -81,7 +81,7 @@ proxies:
       headers: 
         Host: sg2lws.mainssh.xyz
     udp: true
-  - name: 2402_sgtgrpc
+  - name: 0503_sgtgrpc
     server: *akrab4
     port: 443
     type: trojan
