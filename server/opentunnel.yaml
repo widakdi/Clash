@@ -114,7 +114,7 @@ proxies:
       headers: 
         Host: sgx-1.openv2ray.com
     udp: true
-  - name: 0203_sgv-2_tls
+  - name: 0503_sgv-6
     server: *akrab4
     port: 443
     type: vmess
@@ -123,10 +123,10 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sgv-2.openv2ray.com
+    servername: sgv-6.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-widakdi
+      path: /u/opentunnel.net-widakdikw
       headers:
-        Host: sgv-2.openv2ray.com
+        Host: sgv-6.openv2ray.com
     udp: true
