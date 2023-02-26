@@ -99,7 +99,7 @@ proxies:
       headers: 
         Host: sg2-v2ray.sshkit.org
     udp: true
-  - name: 2402_sg3_widakdi
+  - name: 2803_sg3_widakdi
     server: *akrab4
     port: 443
     type: vmess
@@ -111,7 +111,7 @@ proxies:
     servername: sg3-v2ray.sshkit.org
     network: ws
     ws-opts: 
-      path: /sshkit/582191343/63d0788f235e9/
+      path: /sshkit/582191343/63fb5c455eab9/
       headers: 
         Host: sg3-v2ray.sshkit.org
     udp: true
@@ -131,7 +131,7 @@ proxies:
       headers: 
         Host: sg3-v2ray.sshkit.org
     udp: true
-  - name: 2402_sg1_widakdi
+  - name: 2803_sg1_widakdi
     server: 172.67.73.39
     port: 443
     type: vmess
@@ -143,7 +143,7 @@ proxies:
     servername: sg1-v2ray.sshkit.org
     network: ws
     ws-opts: 
-      path: /sshkit/582191343/63d07c3866557/
+      path: /sshkit/582191343/63fb5bb69cdd4/
       headers: 
         Host: sg1-v2ray.sshkit.org
     udp: true
