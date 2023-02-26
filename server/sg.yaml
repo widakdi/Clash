@@ -51,20 +51,6 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 2602_sgmgrpc_serverssh
-    server: *akrab4
-    port: 443
-    type: vmess
-    uuid: b2ad35f8-ffb9-47dc-b9a0-3ef9278241f7
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgmgrpc.serverip.my.id
-    network: grpc
-    grpc-opts:
-      grpc-service-name: grpc
-    udp: true
   - name: 2003_sgcvless.ipservers.xyz_jagoanssh
     server: *akrab4
     port: 443
@@ -94,11 +80,11 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
-  - name: 2402_sg5vless_jagoanssh
+  - name: 0503_sg5vless_jagoanssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: 51a8f80e-66fa-4cce-bace-1db7c674d60d
+    uuid: d6d10beb-14db-400e-a7b5-82a43887d1da
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -109,11 +95,11 @@ proxies:
       headers: 
         Host: sg5vless.ipservers.xyz
     udp: true
-  - name: 2402_sg3vless_jagoanssh
+  - name: 0503_sg3vless_jagoanssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: f15f46f5-7dcd-44d1-8f59-331589afb390
+    uuid: 1e6007f9-f85c-4096-a321-521a45e2a3d8
     cipher: auto
     tls: true
     skip-cert-verify: true
