@@ -85,7 +85,7 @@ proxies:
     server: *akrab4
     port: 443
     type: trojan
-    password: mainssh-masukpak
+    password: mainssh-takkauk
     skip-cert-verify: true
     sni: sgtgrpc.mainssh.xyz
     network: grpc
