@@ -80,11 +80,11 @@ proxies:
     grpc-opts:
       grpc-service-name: grpc
     udp: true
-  - name: 0503_sg5vless_jagoanssh
+  - name: 1203_sg5vless_jagoanssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: d6d10beb-14db-400e-a7b5-82a43887d1da
+    uuid: 1fd8bdfb-f93a-4d71-9e57-1a5e15d9ac93
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -95,11 +95,11 @@ proxies:
       headers: 
         Host: sg5vless.ipservers.xyz
     udp: true
-  - name: 0503_sg3vless_jagoanssh
+  - name: 1203_sg3vless_jagoanssh
     server: *akrab4
     port: 443
     type: vless
-    uuid: 1e6007f9-f85c-4096-a321-521a45e2a3d8
+    uuid: 3e9dd711-b3ed-460e-9f55-dbc83dbb22d2
     cipher: auto
     tls: true
     skip-cert-verify: true
