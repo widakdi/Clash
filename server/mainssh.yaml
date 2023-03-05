@@ -51,11 +51,11 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 0303_sg3lws
+  - name: 1203_sg3lws
     server: *akrab4
     port: 443
     type: vless
-    uuid: 3b90deff-0875-46fa-bc7b-3f166364c24b
+    uuid: 894fa1a1-27d1-4ab6-96c2-facd47535f66
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -66,11 +66,11 @@ proxies:
       headers: 
         Host: sg3lws.mainssh.xyz
     udp: true
-  - name: 0103_sg2lws
+  - name: 1203_sg2lws
     server: *akrab4
     port: 443
     type: vless
-    uuid: e3429856-9c1e-4cc9-a489-00837a5482a5
+    uuid: 4bddf12b-4df2-4f01-b725-6ebbdd703ce9
     cipher: auto
     tls: true
     skip-cert-verify: true
