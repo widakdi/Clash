@@ -51,7 +51,7 @@ flex:
   - &flex 104.22.2.25
 
 proxies:
-  - name: 1603_sgv-5
+  - name: 1903_sgv-5
     server: *akrab4
     port: 443
     type: vmess
@@ -63,11 +63,11 @@ proxies:
     servername: sgv-5.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-mantapcok
+      path: /u/opentunnel.net-widakdik
       headers:
         Host: sgv-5.openv2ray.com
     udp: true
-  - name: 0803_sgv-4
+  - name: 1903_sgv-4
     server: *akrab4
     port: 443
     type: vmess
@@ -79,7 +79,7 @@ proxies:
     servername: sgv-4.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-widakdiku
+      path: /u/opentunnel.net-widakdioo
       headers:
         Host: sgv-4.openv2ray.com
     udp: true
@@ -130,7 +130,7 @@ proxies:
       headers:
         Host: sgv-6.openv2ray.com
     udp: true
-  - name: 0803_sgv-2
+  - name: 1903_sgv-2
     server: *akrab4
     port: 443
     type: vmess
@@ -142,7 +142,7 @@ proxies:
     servername: sgv-2.openv2ray.com
     network: ws
     ws-opts:
-      path: /u/opentunnel.net-widakdikk
+      path: /u/opentunnel.net-widakdik
       headers:
         Host: sgv-2.openv2ray.com
     udp: true
