@@ -179,7 +179,7 @@ proxies:
       headers: 
         Host: sg1-v2ray.sshkit.org
     udp: true
-  - name: 1903_sg-lb.vhax.net_tls
+  - name: 2003_sg-lb.vhax.net_tls
     server: *akrab4
     port: 443
     type: vmess
@@ -191,7 +191,7 @@ proxies:
     servername: sg-lb.vhax.net
     network: ws
     ws-opts: 
-      path: /sshkit/kokngene/640dc8f40e4de/
+      path: /sshkit/kolalal/640f9a7f922b2/
       headers: 
         Host: sg-lb.vhax.net
     udp: true
